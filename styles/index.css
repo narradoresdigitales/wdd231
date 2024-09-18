@@ -56,7 +56,6 @@ header nav a {
     font-size: 30px;
     cursor: pointer;
     color: white;
-    position: absolute;
     top: 15px;
     right: 15px;
     z-index: 100;
@@ -101,7 +100,7 @@ main {
 section {
     padding: 15px;
     background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -109,10 +108,12 @@ section {
 section p {
     background-color: teal;
     color: white;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 10px;
     text-align: center;
+    margin-top: -15px;
     margin-bottom: 10px;
+    width: 103%;
+    margin-left: -15px;
 }
 
 /* Section-specific styles */
@@ -202,6 +203,18 @@ button.filter:hover {
         padding: 5px;
     }
 }
+
+@media (min-width: 1024px) {
+    .closeButton {
+        display: none;
+    }
+
+    .burger {
+        display: none;
+    }
+}
+
+
 
 /* Footer styling */
 footer {
