@@ -1,11 +1,20 @@
-/* General reset */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Header styling */
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -16,25 +25,21 @@ header {
     position: relative;
 }
 
-/* Profile image styling */
 header img.profile {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-/* Heading (name) styling */
 header h1 {
     font-size: 20px;
     margin-left: 10px;
 }
 
-/* Right-align nav menu and burger icon */
 header nav, .burger {
-    margin-left: auto; /* Move to the right */
+    margin-left: auto;
 }
 
-/* Basic nav link styling */
 header nav {
     display: flex;
     gap: 20px;
@@ -46,48 +51,44 @@ header nav a {
     font-size: 18px;
 }
 
-/* Burger menu and close button */
 .burger {
     font-size: 30px;
     cursor: pointer;
-    display: none; /* Hidden by default (shown on mobile only) */
+    display: none;
 }
 
 .closeButton {
-    display: none; /* Hidden by default */
+    display: none;
     font-size: 30px;
     cursor: pointer;
     color: white;
-    position: absolute; /* Allow absolute positioning */
-    top: 15px; /* Adjust top position based on your layout */
-    right: 15px; /* Place it on the right side of the screen */
-    z-index: 100; /* Ensure it's on top of other elements */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
 }
 
-/* Responsive styling for smaller screens */
+/* Responsive Navigation */
 @media (max-width: 768px) {
     header nav {
-        display: none; /* Hide nav links initially */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 0; /* Ensure the menu slides from the right */
+        right: 0;
         background-color: teal;
-        width: 200px; /* Set width for the sliding menu */
+        width: 200px;
         padding: 20px;
     }
 
-    /* Show burger menu on smaller screens */
     .burger {
         display: block;
     }
 
-    /* Show nav links when the burger menu is active */
     nav.show-nav {
         display: flex;
     }
 
-    /* Show the close button inside the nav */
     .closeButton {
         display: block;
         align-self: flex-end;
@@ -95,157 +96,126 @@ header nav a {
     }
 }
 
-/* Styling the main and sections */
+/* Main content layout using Grid */
 main {
-    display: flex;
-    flex-direction: column; /* Default to column for smaller screens */
-    align-items: center; /* Center the sections horizontally */
-    padding-top: 20px; /* Adjust top padding to control space below the header */
-    gap: 20px; /* Adds spacing between sections */
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Styling for sections to be displayed in a row */
-@media (min-width: 768px) {
-    main {
-        flex-direction: row; /* Display sections in a row */
-        flex-wrap: wrap; /* Allow wrapping if needed */
-        justify-content: space-between; /* Distribute space between sections */
-    }
-
-    section {
-        width: 48%; /* Adjust width to fit two sections in a row with some spacing */
-        margin: 0; /* Ensure no extra margin */
-    }
-}
-
-/* Styling for <p> elements in all sections */
-section p {
-    background-color: teal; /* Teal background color */
-    color: white; /* White text color for contrast */
-    padding: 15px; /* Add padding inside the paragraph for spacing */
-    border-radius: 5px; /* Optional: Rounded corners */
-    text-align: center; /* Center the text inside the paragraph */
-    margin-bottom: 10px;
-    width: 100%; /* Ensure the background color takes up the entire width of the section */
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-}
-
-/* Styling for sections */
 section {
-    text-align: center;
-    width: 90%; /* Optional: Control the width of the section */
     padding: 15px;
-    border: 1px solid #ccc; /* Optional: Add a border around the section */
-    background-color: #f9f9f9; /* Optional: Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
-    display: flex; /* Enable Flexbox */
-    flex-direction: column; /* Stack items vertically */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Styling for <ul> elements inside sections */
+section p {
+    background-color: teal;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Section-specific styles */
 section ul {
-    list-style-position: inside; /* Keep the bullets inside the list */
-    padding-left: 15px; /* Adjust the padding to move the list to the right */
+    list-style-position: inside;
+    padding-left: 15px;
 }
 
 section ul li {
-    text-align: left; /* Ensure the text inside each <li> is still aligned left */
+    text-align: left;
 }
 
-/* Styling for figure and its contents */
 figure {
-    text-align: center; /* Center the image and caption */
-    margin: 0; /* Remove default margins */
+    margin: 0;
+    text-align: center;
 }
 
 img.texas-flag {
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto; /* Maintain aspect ratio */
-    border: 1px solid #ccc; /* Optional: Add a border around the image */
-    border-radius: 5px; /* Optional: Rounded corners for the image */
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 figcaption {
-    font-size: 14px; /* Adjust font size for the caption */
-    color: #666; /* Optional: Use a color that contrasts with the background */
-    margin-top: 5px; /* Add space between the image and the caption */
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
 }
 
-/* Styling for buttons */
+/* Button Styling */
 button.filter {
     margin: 5px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: teal; /* Button background color */
-    color: white; /* Text color */
+    background-color: teal;
+    color: white;
     cursor: pointer;
-    display: inline-block; /* Ensure buttons align horizontally */
+    transition: background-color 0.3s ease;
 }
 
 button.filter:hover {
-    background-color: darkcyan; /* Darker shade on hover */
+    background-color: darkcyan;
 }
 
-/* Add a container for buttons to control their alignment */
 .button-container {
-    display: flex; /* Align buttons in a row */
-    justify-content: center; /* Center buttons horizontally */
-    width: 100%; /* Full width of the section */
-    margin-bottom: 20px; /* Space below the buttons */
-}
-
-#course-list {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .course-item {
-    border: 1px solid #ddd;
-    border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: white; /* Background for course items */
-    text-align: center; /* Center-align text within the item */
-    width: 100%; /* Ensure it takes up the full width of its container */
-    box-sizing: border-box; /* Include padding and border in the total width and height */
-}
-
-.filter {
-    padding: 10px 20px; /* 10px top and bottom, 20px left and right */
-    font-size: 16px;
-    border: none;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: teal; /* Or any color you prefer */
-    color: white;
-    cursor: pointer;
-    margin: 5px; /* Optional: Adds space between buttons */
-    transition: background-color 0.3s ease; /* Optional: Smooth transition on hover */
+    background-color: white;
+    text-align: center;
 }
 
-/* FOOTER */
+/* Responsive grid layout for larger screens */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+    section {
+        margin: 0;
+    }
+}
+
+/* Footer styling */
 footer {
-    background-color: teal; /* Or any color you prefer */
+    background-color: teal;
     color: white;
     padding: 20px;
     text-align: center;
     font-size: 14px;
-    border-top: 1px solid #ccc; /* Optional: Adds a top border */
+    border-top: 1px solid #ccc;
 }
 
 footer p {
-    margin: 5px 0; /* Adjusts the vertical spacing between paragraphs */
+    margin: 5px 0;
 }
 
 footer .usa-flag {
-    height: 20px; /* Adjust the size as needed */
-    vertical-align: middle; /* Aligns the flag with the text */
-    margin-left: 10px; /* Adds space between the text and the image */
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 #currentYear {
-    font-weight: bold; /* Makes the year stand out */
+    font-weight: bold;
 }
 
 #lastModified {
-    font-style: italic; /* Makes the last modified date italicized */
+    font-style: italic;
 }
