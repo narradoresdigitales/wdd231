@@ -1,10 +1,4 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+
 
 body {
     line-height: 1.6;
@@ -90,7 +84,7 @@ header nav a {
     }
 
     .closeButton {
-        display: block;
+        display: none;
         align-self: flex-end;
         margin-bottom: 20px;
     }
@@ -173,7 +167,7 @@ button.filter:hover {
 }
 
 .course-item {
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -185,10 +179,27 @@ button.filter:hover {
 @media (min-width: 768px) {
     main {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-rows: auto auto 1fr; /* Set the rows */
     }
 
+    section:nth-child(3) {
+        grid-column: 1 / -1; /* Span across all columns */
+    }
+
+    
     section {
         margin: 0;
+    }
+
+    /* Grid layout for course items */
+    #course-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for course items */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .course-item {
+        padding: 5px;
     }
 }
 
