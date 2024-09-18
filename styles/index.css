@@ -64,7 +64,6 @@ header nav a {
     z-index: 100; /* Ensure it's on top of other elements */
 }
 
-
 /* Responsive styling for smaller screens */
 @media (max-width: 768px) {
     header nav {
@@ -96,47 +95,64 @@ header nav a {
     }
 }
 
-/* styling the main and sections*/
+/* Styling the main and sections */
 main {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Horizontally center the sections */
+    flex-direction: column; /* Default to column for smaller screens */
+    align-items: center; /* Center the sections horizontally */
     padding-top: 20px; /* Adjust top padding to control space below the header */
-    gap: 20px; /* Adds spacing between sections without too much space */
+    gap: 20px; /* Adds spacing between sections */
 }
 
+/* Styling for sections to be displayed in a row */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row; /* Display sections in a row */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        justify-content: space-between; /* Distribute space between sections */
+    }
+
+    section {
+        width: 48%; /* Adjust width to fit two sections in a row with some spacing */
+        margin: 0; /* Ensure no extra margin */
+    }
+}
+
+/* Styling for <p> elements in all sections */
+section p {
+    background-color: teal; /* Teal background color */
+    color: white; /* White text color for contrast */
+    padding: 15px; /* Add padding inside the paragraph for spacing */
+    border-radius: 5px; /* Optional: Rounded corners */
+    text-align: center; /* Center the text inside the paragraph */
+    margin-bottom: 10px;
+    width: 100%; /* Ensure the background color takes up the entire width of the section */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+/* Styling for sections */
 section {
     text-align: center;
-    width: 80%; /* Optional: Control the width of the section */
+    width: 90%; /* Optional: Control the width of the section */
     padding: 15px;
     border: 1px solid #ccc; /* Optional: Add a border around the section */
     background-color: #f9f9f9; /* Optional: Light background color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
-    margin: 20px auto;
     display: flex; /* Enable Flexbox */
     flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
 }
 
+/* Styling for <ul> elements inside sections */
 section ul {
     list-style-position: inside; /* Keep the bullets inside the list */
-    padding-left:15px; /* Adjust the padding to move the list to the right */
+    padding-left: 15px; /* Adjust the padding to move the list to the right */
 }
 
 section ul li {
     text-align: left; /* Ensure the text inside each <li> is still aligned left */
 }
 
-section p {
-    background-color: teal; /* Teal background color */
-    color: white; /* White text color for contrast */
-    padding: 10px; /* Add padding inside the paragraph for spacing */
-    border-radius: 5px; /* Optional: Rounded corners */
-    text-align: center; /* Center the text inside the paragraph */
-    margin: 0 0 20px 0; /* Add bottom margin for vertical space, adjust value as needed */
-}
-
-/* styling section two*/
+/* Styling for figure and its contents */
 figure {
     text-align: center; /* Center the image and caption */
     margin: 0; /* Remove default margins */
@@ -155,9 +171,7 @@ figcaption {
     margin-top: 5px; /* Add space between the image and the caption */
 }
 
-
-/* styling section three*/
-
+/* Styling for buttons */
 button.filter {
     margin: 5px;
     padding: 10px 20px;
@@ -191,8 +205,11 @@ button.filter:hover {
     padding: 10px;
     margin-bottom: 10px;
     background-color: white; /* Background for course items */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Center-align text within the item */
+    width: 100%; /* Ensure it takes up the full width of its container */
+    box-sizing: border-box; /* Include padding and border in the total width and height */
 }
+
 .filter {
     padding: 10px 20px; /* 10px top and bottom, 20px left and right */
     font-size: 16px;
@@ -203,4 +220,32 @@ button.filter:hover {
     cursor: pointer;
     margin: 5px; /* Optional: Adds space between buttons */
     transition: background-color 0.3s ease; /* Optional: Smooth transition on hover */
+}
+
+/* FOOTER */
+footer {
+    background-color: teal; /* Or any color you prefer */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #ccc; /* Optional: Adds a top border */
+}
+
+footer p {
+    margin: 5px 0; /* Adjusts the vertical spacing between paragraphs */
+}
+
+footer .usa-flag {
+    height: 20px; /* Adjust the size as needed */
+    vertical-align: middle; /* Aligns the flag with the text */
+    margin-left: 10px; /* Adds space between the text and the image */
+}
+
+#currentYear {
+    font-weight: bold; /* Makes the year stand out */
+}
+
+#lastModified {
+    font-style: italic; /* Makes the last modified date italicized */
 }

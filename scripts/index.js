@@ -144,3 +144,23 @@ document.addEventListener('DOMContentLoaded', () => {
     displayCourses('all'); // Display all courses by default
     setUpFilters(); // Set up filter buttons
 });
+
+
+// Function to set current year
+function setCurrentYear() {
+    const yearElement = document.getElementById('currentYear');
+    const currentYear = new Date().getFullYear();
+    yearElement.textContent = currentYear;
+}
+
+// Function to set last modified date
+function setLastModifiedDate() {
+    const lastModifiedElement = document.getElementById('lastModified');
+    const lastModifiedDate = new Date(document.lastModified).toLocaleDateString();
+    lastModifiedElement.textContent = `Last updated on: ${lastModifiedDate}`;
+}
+
+// Call the functions to update footer
+setCurrentYear();
+setLastModifiedDate();
+
