@@ -104,46 +104,62 @@ const courses = [
     }
 ]
 
-// Function to display filtered courses
-function displayCourses(filter) {
-    const courseList = document.getElementById('course-list');
-    courseList.innerHTML = ''; // Clear previous courses
+// Select the course list container
+const courseList = document.getElementById('course-list');
 
-    // Debug log to check filter
-    console.log(`Filtering by: ${filter}`);
+// Function to display the courses based on filter
+function displayCourses(filter = 'all') {
+    // Clear the course list before displaying new content
+    courseList.innerHTML = '';
 
-    const filteredCourses = filter === 'all' ? courses : courses.filter(course => course.subject === filter);
+    // Filter courses based on the selected filter (CSE, WDD, or all)
+    const filteredCourses = courses.filter(course => {
+        if (filter === 'all') {
+            return true;
+        }
+        return course.subject === filter;
+    });
 
-    // Check if courses are being filtered correctly
-    console.log('Filtered courses:', filteredCourses);
-
+    // Loop through the filtered courses and create elements for each course
     filteredCourses.forEach(course => {
         const courseItem = document.createElement('div');
-        courseItem.className = 'course-item';
+        courseItem.classList.add('course-item');
+
+        // Apply the 'completed' or 'incomplete' class based on the course's status
+        if (course.completed) {
+            courseItem.classList.add('completed');
+        } else {
+            courseItem.classList.add('incomplete');
+        }
+
+        // Add course details
         courseItem.innerHTML = `
-            <h3>${course.subject} ${course.number}</h3>`;
+            <h3>${course.subject} ${course.number}`;
+
+        // Append the course item to the course list
         courseList.appendChild(courseItem);
     });
 }
 
-// Function to set up filter buttons
-function setUpFilters() {
-    const filterButtons = document.querySelectorAll('.filter');
+// Add event listeners to the filter buttons
+const filterButtons = document.querySelectorAll('.filter');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const filter = e.target.getAttribute('data-filter');
-            console.log(`Button clicked: ${filter}`); // Debug log for button click
-            displayCourses(filter); // Call the display function with the selected filter
-        });
+filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Get the filter value from the button's data-filter attribute
+        const filter = button.getAttribute('data-filter');
+
+        // Display the courses based on the selected filter
+        displayCourses(filter);
     });
-}
-
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    displayCourses('all'); // Display all courses by default
-    setUpFilters(); // Set up filter buttons
 });
+
+// Display all courses by default when the page loads
+displayCourses();
+
+
+
+
 
 
 // Function to set current year
