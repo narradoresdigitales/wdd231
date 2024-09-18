@@ -1,0 +1,206 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: teal;
+    color: white;
+    position: relative;
+}
+
+/* Profile image styling */
+header img.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Heading (name) styling */
+header h1 {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* Right-align nav menu and burger icon */
+header nav, .burger {
+    margin-left: auto; /* Move to the right */
+}
+
+/* Basic nav link styling */
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Burger menu and close button */
+.burger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Hidden by default (shown on mobile only) */
+}
+
+.closeButton {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute; /* Allow absolute positioning */
+    top: 15px; /* Adjust top position based on your layout */
+    right: 15px; /* Place it on the right side of the screen */
+    z-index: 100; /* Ensure it's on top of other elements */
+}
+
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    header nav {
+        display: none; /* Hide nav links initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0; /* Ensure the menu slides from the right */
+        background-color: teal;
+        width: 200px; /* Set width for the sliding menu */
+        padding: 20px;
+    }
+
+    /* Show burger menu on smaller screens */
+    .burger {
+        display: block;
+    }
+
+    /* Show nav links when the burger menu is active */
+    nav.show-nav {
+        display: flex;
+    }
+
+    /* Show the close button inside the nav */
+    .closeButton {
+        display: block;
+        align-self: flex-end;
+        margin-bottom: 20px;
+    }
+}
+
+/* styling the main and sections*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center the sections */
+    padding-top: 20px; /* Adjust top padding to control space below the header */
+    gap: 20px; /* Adds spacing between sections without too much space */
+}
+
+section {
+    text-align: center;
+    width: 80%; /* Optional: Control the width of the section */
+    padding: 15px;
+    border: 1px solid #ccc; /* Optional: Add a border around the section */
+    background-color: #f9f9f9; /* Optional: Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    margin: 20px auto;
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+section ul {
+    list-style-position: inside; /* Keep the bullets inside the list */
+    padding-left:15px; /* Adjust the padding to move the list to the right */
+}
+
+section ul li {
+    text-align: left; /* Ensure the text inside each <li> is still aligned left */
+}
+
+section p {
+    background-color: teal; /* Teal background color */
+    color: white; /* White text color for contrast */
+    padding: 10px; /* Add padding inside the paragraph for spacing */
+    border-radius: 5px; /* Optional: Rounded corners */
+    text-align: center; /* Center the text inside the paragraph */
+    margin: 0 0 20px 0; /* Add bottom margin for vertical space, adjust value as needed */
+}
+
+/* styling section two*/
+figure {
+    text-align: center; /* Center the image and caption */
+    margin: 0; /* Remove default margins */
+}
+
+img.texas-flag {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ccc; /* Optional: Add a border around the image */
+    border-radius: 5px; /* Optional: Rounded corners for the image */
+}
+
+figcaption {
+    font-size: 14px; /* Adjust font size for the caption */
+    color: #666; /* Optional: Use a color that contrasts with the background */
+    margin-top: 5px; /* Add space between the image and the caption */
+}
+
+
+/* styling section three*/
+
+button.filter {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: teal; /* Button background color */
+    color: white; /* Text color */
+    cursor: pointer;
+    display: inline-block; /* Ensure buttons align horizontally */
+}
+
+button.filter:hover {
+    background-color: darkcyan; /* Darker shade on hover */
+}
+
+/* Add a container for buttons to control their alignment */
+.button-container {
+    display: flex; /* Align buttons in a row */
+    justify-content: center; /* Center buttons horizontally */
+    width: 100%; /* Full width of the section */
+    margin-bottom: 20px; /* Space below the buttons */
+}
+
+#course-list {
+    margin-top: 20px;
+}
+
+.course-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white; /* Background for course items */
+    text-align: left; /* Align text to the left */
+}
+.filter {
+    padding: 10px 20px; /* 10px top and bottom, 20px left and right */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: teal; /* Or any color you prefer */
+    color: white;
+    cursor: pointer;
+    margin: 5px; /* Optional: Adds space between buttons */
+    transition: background-color 0.3s ease; /* Optional: Smooth transition on hover */
+}

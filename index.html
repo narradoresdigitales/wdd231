@@ -11,6 +11,8 @@
 </head>
 <body>
     <header>
+        <img class="profile" src="images/profile.jpg">
+        <h1>Marcus 'Sil' Palmer</h1>
         <!-- create variable for #burger-menu <img> in js file to access element-->
         <div class="burger" id="burger-menu">&#9776;</div>
         <!-- create variable for 'x' in <span> in js file to access element -->
@@ -24,8 +26,6 @@
             
         </nav>
 
-        <img class="profile" src="images/profile.jpg">
-        <h1>Marcus 'Sil' Palmer</h1>
     </header>
 
     <main>
@@ -42,16 +42,25 @@
         <!--section two-->
         <section>
             <p>Texas, USA</p>
-            <img class="texas-flag" src="images/texas-flag.png">
+            <figure>
+            <img class="texas-flag" src="images/texas-flag.png" alt="Texas Flag">
+            <figcaption>Texas State Flag</figcaption>
+        </figure>
         </section>
         
         <!--section three-->
         <section>
             <p>Web and Computer Programming Certificate</p>
 
-            <button class="all">All</button>
-            <button class="all">CSE</button>
-            <button class="all">WDD</button>
+            <div class="button-container"> 
+            <button class="filter" data-filter="all">All</button>
+            <button class="filter" data-filter="CSE">CSE</button>
+            <button class="filter" data-filter="WDD">WDD</button>
+            </div>
+            
+            <div id="course-list">
+
+            </div>
         </section>
     </main>
 

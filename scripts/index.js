@@ -1,3 +1,25 @@
+// script.js
+
+// Select the burger menu and the close button
+const burgerMenu = document.getElementById('burger-menu');
+const closeButton = document.getElementById('closeButton');
+
+// Select the nav element
+const nav = document.querySelector('nav');
+
+// Event listener for showing the menu
+burgerMenu.addEventListener('click', () => {
+    nav.classList.add('show-nav'); // Add class to display the nav
+    burgerMenu.style.display = 'none'; // Hide the burger menu icon
+    closeButton.style.display = 'block'; // Show the close button
+});
+
+// Event listener for hiding the menu
+closeButton.addEventListener('click', () => {
+    nav.classList.remove('show-nav'); // Remove class to hide the nav
+    burgerMenu.style.display = 'block'; // Show the burger menu icon
+    closeButton.style.display = 'none'; // Hide the close button
+});
 
 
 
@@ -81,3 +103,44 @@ const courses = [
         completed: false
     }
 ]
+
+// Function to display filtered courses
+function displayCourses(filter) {
+    const courseList = document.getElementById('course-list');
+    courseList.innerHTML = ''; // Clear previous courses
+
+    // Debug log to check filter
+    console.log(`Filtering by: ${filter}`);
+
+    const filteredCourses = filter === 'all' ? courses : courses.filter(course => course.subject === filter);
+
+    // Check if courses are being filtered correctly
+    console.log('Filtered courses:', filteredCourses);
+
+    filteredCourses.forEach(course => {
+        const courseItem = document.createElement('div');
+        courseItem.className = 'course-item';
+        courseItem.innerHTML = `
+            <h3>${course.subject} ${course.number}</h3>`;
+        courseList.appendChild(courseItem);
+    });
+}
+
+// Function to set up filter buttons
+function setUpFilters() {
+    const filterButtons = document.querySelectorAll('.filter');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const filter = e.target.getAttribute('data-filter');
+            console.log(`Button clicked: ${filter}`); // Debug log for button click
+            displayCourses(filter); // Call the display function with the selected filter
+        });
+    });
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    displayCourses('all'); // Display all courses by default
+    setUpFilters(); // Set up filter buttons
+});
