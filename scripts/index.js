@@ -157,6 +157,24 @@ filterButtons.forEach(button => {
 // Display all courses by default when the page loads
 displayCourses();
 
+// Function to calculate remaining credits
+function calculateRemainingCredits() {
+    let totalCredits = 0;
+    
+    // Loop through the courses and sum credits for incomplete courses
+    courses.forEach(course => {
+        if (!course.completed) {
+            totalCredits += course.credits;
+        }
+    });
+
+    // Display the total credits in the designated element
+    const creditsElement = document.getElementById('remaining-credits');
+    creditsElement.textContent = `Remaining Credits: ${totalCredits}`;
+}
+
+// Call the function to calculate remaining credits when the page loads
+calculateRemainingCredits();
 
 
 
