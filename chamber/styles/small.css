@@ -91,12 +91,13 @@ nav ul li a {
 }
 
 nav {
-    display: grid;
-    grid-template-columns: 1fr;
-    transition: all 0.5s ease-out
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.5s ease-out
 }
 nav ul {
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     display: none;
 }
 
