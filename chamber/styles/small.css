@@ -2,14 +2,16 @@
 
 
 .chamber-image {
-    width: 100px;
-    height: auto;
+    width: 34px;
+    height: 40px;
     border-radius: 10px;
+
+    
 }
 
 .chamber-name {
     font-family: 'Libre Baskerville' serif;
-    font-size: 2em;
+    font-size: 1em;
     color: #3E2723;
     text-transform: uppercase;
 }
@@ -28,9 +30,12 @@ body {
 */
 
 header {
+    display: grid;
+    grid-template-columns: 44px, auto,1fr;
+    align-items: center;
     background-color: #D4A373; /* Deep Earth Brown */
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
+    
 }
 
 #myButton {
@@ -40,8 +45,16 @@ header {
     color: #fff;
     cursor: pointer;
     width: 100%;
-    text-align: left;
+    text-align: right;
     padding: .25rem 2vw;
+}
+
+#myButton::before {
+    content: "\2630";
+}
+
+#myButton.open::before {
+    content: "x";
 }
 
 ul.menuLinks li a {
@@ -51,7 +64,7 @@ ul.menuLinks li a {
 }
 
 li.current-menu-item a {
-    background-color: black rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.2);
 }
 
 ul.menuLinks {
@@ -85,7 +98,7 @@ button {
     color: #ffffff; /* White for readability */
 }
 
-h1, h2, h3, .logo-text {
+span, h1, h2, h3, .logo-text {
     font-family: 'Libre Baskerville', serif;
 }
 
