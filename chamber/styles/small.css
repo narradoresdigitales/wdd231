@@ -104,6 +104,32 @@ span, h1, h2, h3, .logo-text {
     font-family: 'Libre Baskerville', serif;
 }
 
+/* style member cards */
+
+#members-container {
+    display: grid; /* Default to grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+}
+
+.member-card {
+    background-color: #f9f9f9; /* Light background for cards */
+    border: 1px solid #ccc; /* Border around cards */
+    padding: 15px; /* Padding inside cards */
+    text-align: center; /* Center text */
+}
+
+.member-list-item {
+    border-bottom: 1px solid #ccc; /* List item border */
+    padding: 10px 0; /* Padding for list items */
+}
+
+.member-list-item img {
+    width: 50px; /* Smaller images for list items */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
 
 
 
