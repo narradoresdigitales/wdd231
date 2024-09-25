@@ -34,6 +34,32 @@ header {
     text-align: center;
 }
 
+#myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: .25rem 2vw;
+}
+
+ul.menuLinks li a {
+    padding: .75rem 2vw;
+    display: block;
+    text-decoration: none;
+}
+
+li.current-menu-item a {
+    background-color: black rgba(0,0,0,0.2);
+}
+
+ul.menuLinks {
+    display: none;
+    list-style-type: none;
+}
+
 .nav a {
     color: #B71C1C; /* Gaucho Red */
 }
@@ -49,6 +75,11 @@ nav ul li a {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
 }
+
+ul.menuLinks.open {
+    display: block;
+}
+
 
 button {
     background-color: #A67C52; /* Saddle Leather Tan */
