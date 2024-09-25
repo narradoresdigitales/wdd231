@@ -11,6 +11,13 @@
     ul.menuLinks a:hover {
     background-color:rgba(255, 255, 255, 0.2);
     }
+
+    .chamber-name {
+        font-family: 'Libre Baskerville' serif;
+        font-size: 18px;
+        color: #3E2723;
+        margin-left: 20px;
+    }
 }
 
 

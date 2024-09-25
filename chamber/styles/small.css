@@ -2,8 +2,8 @@
 
 
 .chamber-image {
-    width: 34px;
-    height: 40px;
+    width: 75px;
+    height: auto;
     border-radius: 10px;
 
     
@@ -11,10 +11,9 @@
 
 .chamber-name {
     font-family: 'Libre Baskerville' serif;
-    font-size: 1.5em;
+    font-size: 14px;
     color: #3E2723;
-    text-transform: uppercase;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 body {
@@ -31,9 +30,10 @@ body {
 */
 
 header {
-    display: grid;
+    display: flex;
     grid-template-columns: 44px, auto 1fr;
     align-items: center;
+    justify-content: space-between;
     background-color: #D4A373; /* Deep Earth Brown */
     padding: 10px;
     
@@ -58,8 +58,6 @@ header {
     content: "x";
 }
 
-
-
 ul.menuLinks li a {
     padding: .75rem 2vw;
     display: block;
@@ -75,9 +73,6 @@ ul.menuLinks {
     list-style-type: none;
 }
 
-nav {
-    justify-self: end;
-}
 
 .nav a {
     color: #B71C1C; /* Gaucho Red */
