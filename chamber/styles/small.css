@@ -1,5 +1,118 @@
+
+
+
+
 .chamber-image {
     width: 100px;
     height: auto;
     border-radius: 10px;
 }
+
+.chamber-name {
+    font-family: 'Libre Baskerville' serif;
+    font-size: 2em;
+    color: #3E2723;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: #F5DEB3; /* Light Wheat */
+    color: #37474F; /* Charcoal Gray */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 
+.quote {
+    font-family: 'Amatic SC', cursive;
+}
+
+*/
+
+header {
+    background-color: #D4A373; /* Deep Earth Brown */
+    padding: 20px;
+    text-align: center;
+}
+
+.nav a {
+    color: #B71C1C; /* Gaucho Red */
+}
+
+nav  ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3e2723;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
+
+button {
+    background-color: #A67C52; /* Saddle Leather Tan */
+    color: #ffffff; /* White for readability */
+}
+
+h1, h2, h3, .logo-text {
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+
+
+footer {
+    background-color: #8BC34A; /* Pampas Grass Green */
+}
+
+
+
+
+/* 
+
+Primary Colors:
+
+Deep Earth Brown (#4E342E): Represents the leather of the gaucho's gear and the earthy landscape of the pampas.
+
+Saddle Leather Tan (#A67C52): A lighter leather tone, reflecting the materials used in boots, saddles, and belts.
+
+Gaucho Red (#B71C1C): A bold color that reflects the traditional red used in ponchos, flags, and gaucho accessories.
+Secondary Colors:
+
+Pampas Grass Green (#8BC34A): A muted green reminiscent of the grasslands where the gauchos live and work.
+
+Sky Blue (#42A5F5): Represents the Argentine sky, which is often clear and expansive, and also ties into the colors of the Argentine flag.
+
+Light Wheat (#F5DEB3): A soft wheat or beige tone, evoking the farmlands and open plains.
+Accent Colors:
+
+Silver (#B0BEC5): To represent the silver details in gaucho belts and knives (facón). This can add a metallic, elegant touch.
+
+Charcoal Gray (#37474F): A neutral but strong color for text and backgrounds, balancing the more rustic tones of the palette.
+
+Example Color Pairing for Web Elements:
+Header/Navigation: Deep Earth Brown background with Gaucho Red highlights.
+Buttons/Calls to Action: Gaucho Red or Saddle Leather Tan for high visibility.
+Text: Charcoal Gray for body text, Sky Blue or Pampas Green for links or emphasis.
+Background: Light Wheat or Pampas Grass Green for soft, neutral backgrounds that keep the site light and inviting.
+
+
+*/
+
+
+/*
+
+Primary Font (Headings, Logo, and Emphasis):
+
+"Libre Baskerville": A classic, readable serif font that evokes a sense of tradition and heritage, fitting for a cultural site. It has a slightly rustic feel but remains clean and professional.
+"Merriweather": Another serif option with a more traditional, timeless appearance. It works well for headings and gives off a sense of strength and history, tying into gaucho values.
+Secondary Font (Body Text):
+
+"Roboto": A modern sans-serif font that’s clean, easy to read, and pairs well with serif fonts like Libre Baskerville or Merriweather. It ensures a professional appearance for body text without distracting from the content.
+"Lato": A versatile, humanist sans-serif font. It’s slightly softer and friendlier than Roboto, making it a good option for body text to keep the site approachable and readable.
+Accent Font (Optional for Quotes or Special Text):
+
+"Amatic SC": A decorative, hand-drawn typeface that can be used for accents, such as quotes, testimonials, or callouts. It gives a more handcrafted, personal touch, reflecting the traditional, artisanal side of gaucho life.
+
+*/
