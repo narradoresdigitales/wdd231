@@ -1,15 +1,16 @@
 
 
 .chamber-image {
-    width: 75px;
+    width: 50px;
     height: auto;
     border-radius: 10px;
 }
 
 .chamber-name {
     font-family: 'Roboto', serif;
-    font-size: 16px;
+    font-size: 17px;
     color: white;
+    text-transform: capitalize;
     margin-left: 20px;
 }
 
@@ -95,7 +96,7 @@ h3 {
     width: 30px; /* Set a fixed width */
     height: 40px; /* Set a fixed height */
     position: absolute; /* Adjust position if needed */
-    top: 55px;
+    top: 40px;
     right: 20px;
     z-index: 2000;
     box-shadow: none;
@@ -166,6 +167,7 @@ nav.open ul {
     line-height: 1.5;
     padding: 25px;
     border-radius: 5px;
+    border: solid;
 }
 
 .member-card {
@@ -174,11 +176,13 @@ nav.open ul {
     padding: 15px; /* Padding inside cards */
     text-align: center; /* Center text */
     justify-items: center;
+    
 }
 
 .member-list-item {
     border-bottom: 1px solid #ccc; /* List item border */
     padding: 10px 0; /* Padding for list items */
+    
 }
 
 .member-list-item img {

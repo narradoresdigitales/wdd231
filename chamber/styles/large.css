@@ -14,8 +14,9 @@
 
     .chamber-name {
         font-family: 'Libre Baskerville' serif;
-        font-size: 18px;
+        font-size: 24px;
         color: white;
+        text-transform: capitalize;
         margin: 0px;
     }
 
