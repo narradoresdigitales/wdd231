@@ -5,7 +5,7 @@
         "address": "1234 Beef St, Buenos Aires, Argentina",
         "phone": "+54 11 1234-5678",
         "website": "http://elgaucho.com",
-        "image": "el-gaucho-steak-house.png",
+        "image": "images/el-gaucho-steak-house.png",
         "membershipLevel": 3,
         "info": "Premium Argentine steakhouse with traditional dishes."
     },
@@ -14,7 +14,7 @@
         "address": "5678 Tea Ave, Córdoba, Argentina",
         "phone": "+54 351 8765-4321",
         "website": "http://yerbamate.com",
-        "image": "yerba-mate-supplies.png",
+        "image": "images/yerba-mate-supplies.png",
         "membershipLevel": 2,
         "info": "The best yerba mate supplies in the region."
     },
@@ -23,7 +23,7 @@
         "address": "91011 Ranch Rd, Mendoza, Argentina",
         "phone": "+54 261 1234-7890",
         "website": "http://fiestagaucha.com",
-        "image": "fiesta-gaucha.png",
+        "image": "images/fiesta-gaucha.png",
         "membershipLevel": 1,
         "info": "Cultural events and experiences showcasing gaucho life."
     },
@@ -32,7 +32,7 @@
         "address": "1213 Snack Blvd, Rosario, Argentina",
         "phone": "+54 341 555-0000",
         "website": "http://pampadelights.com",
-        "image": "pampa-delights.png",
+        "image": "images/pampa-delights.png",
         "membershipLevel": 3,
         "info": "Specialty foods and traditional gaucho recipes."
     },
@@ -41,7 +41,7 @@
         "address": "1415 Artisan St, Salta, Argentina",
         "phone": "+54 387 1234-5678",
         "website": "http://gaucho-crafts.com",
-        "image": "gaucho-crafts.png",
+        "image": "images/gaucho-crafts.png",
         "membershipLevel": 2,
         "info": "Handmade crafts and souvenirs from the Argentine Pampas."
     },
@@ -50,7 +50,7 @@
         "address": "1617 Travel Ave, Bariloche, Argentina",
         "phone": "+54 294 1234-8900",
         "website": "http://estanciatourism.com",
-        "image": "estancia-tourism.png",
+        "image": "images/estancia-tourism.png",
         "membershipLevel": 1,
         "info": "Guided tours and experiences in traditional estancias."
     },
@@ -59,7 +59,7 @@
         "address": "1819 Brew St, La Plata, Argentina",
         "phone": "+54 221 1234-5678",
         "website": "http://matecrafters.com",
-        "image": "mate-crafters.png",
+        "image": "images/mate-crafters.png",
         "membershipLevel": 3,
         "info": "Custom yerba mate brewing tools and accessories."
     }
