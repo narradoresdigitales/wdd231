@@ -6,7 +6,7 @@
 
 .chamber-name {
     font-family: 'Libre Baskerville', serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #3E2723;
     margin-left: 20px;
 }
@@ -22,7 +22,7 @@
     position: absolute; /* Keep it positioned absolutely */
     top: 60px; /* Adjust based on your header height */
     right: 0; /* Align to the right */
-    background:  #A2C07D; /* Set a background color */
+    background:  #3E2723; /* Set a background color */
     width: 100%; /* Full width for better touch targets */
     z-index: 1000; /* Ensure it appears above other elements */
 }
@@ -81,6 +81,7 @@ h1, h2 {
 h3 {
     color: #C72C41; /* Rust Red */
     font-weight: 400;
+    margin: 0;
 }
 
 
@@ -125,7 +126,7 @@ ul.menuLinks li a {
     padding: .75rem 1vw;
     display: block;
     text-decoration: none;
-    color: #3e2723;
+    color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
 }
@@ -156,12 +157,12 @@ nav.open ul {
 #members-container {
     display: grid; /* Default to grid layout */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between items */
+    gap: 35px; /* Space between items */
     justify-items: center;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    padding: 20px;
+    padding: 25px;
     border-radius: 5px;
 }
 
