@@ -2,7 +2,7 @@
 [
     {
         "name": "El Gaucho Steakhouse",
-        "address": "1234 Beef St, Buenos Aires, Argentina",
+        "address": "1234 Beef St \n Buenos Aires, Argentina",
         "phone": "+54 11 1234-5678",
         "website": "http://elgaucho.com",
         "image": "images/el-gaucho-steak-house.png",
@@ -11,7 +11,7 @@
     },
     {
         "name": "Yerba Mate Supplies",
-        "address": "5678 Tea Ave, Córdoba, Argentina",
+        "address": "5678 Tea Ave \n Córdoba, Argentina",
         "phone": "+54 351 8765-4321",
         "website": "http://yerbamate.com",
         "image": "images/yerba-mate-supplies.png",
@@ -20,7 +20,7 @@
     },
     {
         "name": "Fiesta Gaucha",
-        "address": "91011 Ranch Rd, Mendoza, Argentina",
+        "address": "91011 Ranch Rd \n Mendoza, Argentina",
         "phone": "+54 261 1234-7890",
         "website": "http://fiestagaucha.com",
         "image": "images/fiesta-gaucha.png",
@@ -29,7 +29,7 @@
     },
     {
         "name": "Pampa Delights",
-        "address": "1213 Snack Blvd, Rosario, Argentina",
+        "address": "1213 Snack Blvd \n Rosario, Argentina",
         "phone": "+54 341 555-0000",
         "website": "http://pampadelights.com",
         "image": "images/pampa-delights.png",
@@ -38,7 +38,7 @@
     },
     {
         "name": "Gaucho Crafts",
-        "address": "1415 Artisan St, Salta, Argentina",
+        "address": "1415 Artisan St \n Salta, Argentina",
         "phone": "+54 387 1234-5678",
         "website": "http://gaucho-crafts.com",
         "image": "images/gaucho-crafts.png",
@@ -47,7 +47,7 @@
     },
     {
         "name": "Estancia Tourism",
-        "address": "1617 Travel Ave, Bariloche, Argentina",
+        "address": "1617 Travel Ave \n Bariloche, Argentina",
         "phone": "+54 294 1234-8900",
         "website": "http://estanciatourism.com",
         "image": "images/estancia-tourism.png",
@@ -56,7 +56,7 @@
     },
     {
         "name": "Mate Crafters",
-        "address": "1819 Brew St, La Plata, Argentina",
+        "address": "1819 Brew St \n La Plata, Argentina",
         "phone": "+54 221 1234-5678",
         "website": "http://matecrafters.com",
         "image": "images/mate-crafters.png",

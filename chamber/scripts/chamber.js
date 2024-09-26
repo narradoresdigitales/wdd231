@@ -48,10 +48,15 @@ function displayMembers(members) {
         name.textContent = member.name;
 
         const address = document.createElement('p');
-        address.textContent = member.address;
+        address.innerHTML = member.address.replace(/\n/g, '<br>');
+        
 
         const phone = document.createElement('p');
         phone.textContent = member.phone;
+
+        const website = document.createElement('p');
+        website.textContent = member.website;
+        website.style.textDecoration = 'underline';
 
         const membership = document.createElement('p');
         membership.textContent = `Membership Level: ${member.membershipLevel}`;
@@ -61,6 +66,7 @@ function displayMembers(members) {
         memberDiv.appendChild(name);
         memberDiv.appendChild(address);
         memberDiv.appendChild(phone);
+        memberDiv.appendChild(website);
         memberDiv.appendChild(membership);
 
         // Append memberDiv to the container
