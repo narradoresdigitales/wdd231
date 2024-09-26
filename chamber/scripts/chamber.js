@@ -46,6 +46,7 @@ function displayMembers(members) {
         // Create other member details
         const name = document.createElement('h3');
         name.textContent = member.name;
+        name.style.fontWeight = 'bold';
 
         const address = document.createElement('p');
         address.innerHTML = member.address.replace(/\n/g, '<br>');
