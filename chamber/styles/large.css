@@ -18,7 +18,15 @@
         color: #3E2723;
         margin-left: 20px;
     }
-}
+
+
+        #toggle-view {
+            font-size: 14px; /* Slightly smaller font on mobile */
+            padding: 8px; /* Adjust padding on mobile */
+        }
+    }
+
+
 
 
 
