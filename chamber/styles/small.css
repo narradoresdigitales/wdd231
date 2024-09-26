@@ -73,6 +73,7 @@ header {
     justify-content: space-between;
     background-color: #3E2723; /* Deep Earth Brown */
     padding: 10px;
+    padding-bottom: 25px;
 }
 
 /* color scheme for content */
@@ -96,7 +97,7 @@ h3 {
     width: 30px; /* Set a fixed width */
     height: 40px; /* Set a fixed height */
     position: absolute; /* Adjust position if needed */
-    top: 40px;
+    top: 45px;
     right: 20px;
     z-index: 2000;
     box-shadow: none;
