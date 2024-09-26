@@ -1,3 +1,20 @@
+@media (min-width: 425px) and (max-width: 767px) {
+    #myButton {
+        font-size: 2rem;
+        border: none; 
+        background: transparent; 
+        cursor: pointer;
+        width: 30px; /* Set a fixed width */
+        height: 60px; /* Set a fixed height */
+        position: absolute; /* Adjust position if needed */
+        top: 50px;
+        right: 20px;
+        z-index: 2000;
+        box-shadow: none;
+        
+    }
+}
+
 @media only screen and (min-width: 768px) {
     #myButton {
     display: none;
