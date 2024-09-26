@@ -14,6 +14,7 @@
 
 #animateMe {
     display: none; /* Hide it by default */
+    transition: all 1s ease; /* Smooth transition */
 }
 
 #animateMe.open {
@@ -21,7 +22,7 @@
     position: absolute; /* Keep it positioned absolutely */
     top: 60px; /* Adjust based on your header height */
     right: 0; /* Align to the right */
-    background: white; /* Set a background color */
+    background:  #A2C07D; /* Set a background color */
     width: 100%; /* Full width for better touch targets */
     z-index: 1000; /* Ensure it appears above other elements */
 }
@@ -29,11 +30,12 @@
 /* Display the menu when active */
 #toggle-view:checked + #animateMe {
     display: block; /* Show the menu when the toggle is checked */
+    
 }
 
 /* Optional: style for the button to make it look like a hamburger */
 #toggle-view {
-    background-color: transparent; /* Remove default button background */
+    background-color: transparent; /*Remove default button background */
     border: none; /* Remove default border */
     cursor: pointer; /* Pointer cursor on hover */
     font-size: 16px; /* Adjust font size */
@@ -56,9 +58,10 @@
 
 
 body {
-    background-color: #F5DEB3; /* Light Wheat */
-    color: #37474F; /* Charcoal Gray */
+    background-color: #F5F5DC; /* Soft Beige */
+    color: #333333; /* Dark Text */
     font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
 }
 
 header {
@@ -69,26 +72,49 @@ header {
     padding: 10px;
 }
 
+/* color scheme for content */
+h1, h2 {
+    color: #4E6B31; /* Deep Green */
+    font-weight: 700;
+}
+
+h3 {
+    color: #C72C41; /* Rust Red */
+    font-weight: 400;
+}
+
+
 #myButton {
     font-size: 2rem;
-    background: none;
-    border: none;
-    color: #fff;
+    border: none; 
+    background: transparent; 
     cursor: pointer;
-    width: 50px; /* Set a fixed width */
-    height: 50px; /* Set a fixed height */
-    position: relative; /* Adjust position if needed */
-    z-index: 100;
-}
+    width: 30px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    position: absolute; /* Adjust position if needed */
+    top: 55px;
+    right: 20px;
+    z-index: 2000;
+    box-shadow: none;
+    
+} 
 
 #myButton::before {
     content: "\2630"; /* Hamburger icon */
     font-size: 2rem;
     color: #fff;
+    
+}
+
+#myButton.open {
+    border: none;
+    background: none;
 }
 
 #myButton.open::before {
     content: "x"; /* Close icon */
+    color:#C72C41;
+    
 }
 
 ul.menuLinks {
@@ -96,7 +122,7 @@ ul.menuLinks {
 }
 
 ul.menuLinks li a {
-    padding: .75rem 2vw;
+    padding: .75rem 1vw;
     display: block;
     text-decoration: none;
     color: #3e2723;
@@ -126,15 +152,18 @@ nav.open ul {
     display: block;
 }
 
-button {
-    background-color: #A67C52; /* Saddle Leather Tan */
-    color: #ffffff; /* White for readability */
-}
+/* button {
+    /* background-color: #A67C52; Saddle Leather Tan */
+    /* color: #ffffff; White for readability */
+    
+
+/*} */
 
 #members-container {
     display: grid; /* Default to grid layout */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
     gap: 20px; /* Space between items */
+    justify-items: center;
 }
 
 .member-card {
@@ -142,6 +171,7 @@ button {
     border: 1px solid #ccc; /* Border around cards */
     padding: 15px; /* Padding inside cards */
     text-align: center; /* Center text */
+    justify-items: center;
 }
 
 .member-list-item {
@@ -152,6 +182,7 @@ button {
 .member-list-item img {
     width: 50px; /* Smaller images for list items */
     height: auto; /* Maintain aspect ratio */
+
 }
 
 footer {
@@ -159,3 +190,24 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+/* Primary Colors:
+
+Deep Earth Brown (#4E342E): Represents the leather of the gaucho's gear and the earthy landscape of the pampas.
+Saddle Leather Tan (#A67C52): A lighter leather tone, reflecting the materials used in boots, saddles, and belts.
+Gaucho Red (#B71C1C): A bold color that reflects the traditional red used in ponchos, flags, and gaucho accessories.
+Secondary Colors:
+
+Pampas Grass Green (#8BC34A): A muted green reminiscent of the grasslands where the gauchos live and work.
+Sky Blue (#42A5F5): Represents the Argentine sky, which is often clear and expansive, and also ties into the colors of the Argentine flag.
+Light Wheat (#F5DEB3): A soft wheat or beige tone, evoking the farmlands and open plains.
+Accent Colors:
+
+Silver (#B0BEC5): To represent the silver details in gaucho belts and knives (facón). This can add a metallic, elegant touch.
+Charcoal Gray (#37474F): A neutral but strong color for text and backgrounds, balancing the more rustic tones of the palette.
+Example Color Pairing for Web Elements:
+Header/Navigation: Deep Earth Brown background with Gaucho Red highlights.
+Buttons/Calls to Action: Gaucho Red or Saddle Leather Tan for high visibility.
+Text: Charcoal Gray for body text, Sky Blue or Pampas Green for links or emphasis.
+Background: Light Wheat or Pampas Grass Green for soft, neutral backgrounds that keep the site light and inviting.
+*/
