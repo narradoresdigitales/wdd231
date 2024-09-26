@@ -60,8 +60,8 @@
 
 
 body {
-    background-color: #F5F5DC; /* Soft Beige */
-    color: #333333; /* Dark Text */
+    background-color: #F5DEB3; /* Soft Beige */
+    color: #37474F; /* Dark Text */
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
 }
@@ -81,7 +81,7 @@ h1, h2 {
 }
 
 h3 {
-    color: #C72C41; /* Rust Red */
+    color: #37474F; /* Rust Red */
     font-weight: 400;
     margin: 0;
 }
