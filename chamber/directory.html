@@ -23,30 +23,33 @@
 </head>
 <body>
     <header>
-        <img class="chamber-image" src="images/yerba-mate.png"  width="34" height="40" alt="yerba-mate-set">
+        <img class="chamber-image" src="images/yerba-mate.png" width="34" height="40" alt="yerba-mate-set">
         <span class="chamber-name">The Gaucho Chamber of Commerce</span>
         <button id="myButton"></button>
     
-    <nav id="animateMe">
-        <ul class="menuLinks">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li class="current-menu-item"><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-        </ul>
-    </nav>
+        <nav id="animateMe">
+            <ul class="menuLinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li class="current-menu-item"><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- section to display chamber members-->
     <button id="toggle-view">Toggle View</button>
     <div id="members-container"></div>
-    
-
 
     <footer>
         <p>&copy; <span id="current-year"></span> The Gaucho Chamber of Commerce. All rights reserved.</p>
         <p>Last modified: <span id="last-modified"></span></p>
     </footer>
     
+    <script>
+        // Set the current year and last modified date
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
 </body>
 </html>

@@ -1,23 +1,22 @@
+// myButton
 const hamburgerElement = document.querySelector('#myButton');
 const navElement = document.querySelector('#animateMe');
-
-hamburgerElement.addEventListener('click', () => {
-    navElement.classList.toggle('open');
-    hamburgerElement.classList.toggle('open');
-
-});
-
-
-
-/* Get members*/
-
 const membersContainer = document.getElementById('members-container');
 const toggleButton = document.getElementById('toggle-view');
 let isGridView = true; // Initial view is grid
 
+hamburgerElement.addEventListener('click', () => {
+    navElement.classList.toggle('open');
+    hamburgerElement.classList.toggle('open');
+});
+
+// Function to fetch members from the JSON file
 async function fetchMembers() {
     try {
-        const response = await fetch('data/members.json');
+        const response = await fetch('data/members.json'); // Update the path to your JSON file
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
         const members = await response.json();
         displayMembers(members);
     } catch (error) {
@@ -25,40 +24,50 @@ async function fetchMembers() {
     }
 }
 
+// Function to display members
 function displayMembers(members) {
-    membersContainer.innerHTML = ''; // Clear previous content
+    const memberContainer = document.getElementById('members-container');
+
+    // Clear previous members (if any)
+    memberContainer.innerHTML = '';
 
     members.forEach(member => {
-        const memberCard = document.createElement('div');
-        memberCard.className = isGridView ? 'member-card' : 'member-list-item';
-        
-        memberCard.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}" />
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <p><a href="${member.website}" target="_blank">Visit Website</a></p>
-            <p>Membership Level: ${member.membershipLevel}</p>
-            <p>${member.info}</p>
-        `;
-        
-        membersContainer.appendChild(memberCard);
+        const memberDiv = document.createElement('div');
+        memberDiv.classList.add('member');
+
+        // Create image element
+        const img = document.createElement('img');
+        img.src = member.image; // Ensure this path is correct
+        img.alt = member.name;
+        img.classList.add('icon'); // Add a class for styling
+        img.style.width = '100px'; // Set the image width
+        img.style.height = '100px'; // Set the image height
+
+        // Create other member details
+        const name = document.createElement('h3');
+        name.textContent = member.name;
+
+        const address = document.createElement('p');
+        address.textContent = member.address;
+
+        // Append elements to memberDiv
+        memberDiv.appendChild(img);
+        memberDiv.appendChild(name);
+        memberDiv.appendChild(address);
+
+        // Append memberDiv to the container
+        memberContainer.appendChild(memberDiv);
     });
 }
 
+// Call the function to fetch members on page load
+document.addEventListener('DOMContentLoaded', fetchMembers);
+
+
+
+// Toggle between grid and list view
 toggleButton.addEventListener('click', () => {
-    isGridView = !isGridView; // Toggle the view
-    fetchMembers(); // Re-fetch members to apply the new view
+    isGridView = !isGridView;
+    membersContainer.style.display = isGridView ? 'grid' : 'block'; // Change display property for layout
 });
-
-fetchMembers(); // Initial fetch
-
-
-// Set current year and last modified date
-const currentYearSpan = document.getElementById('current-year');
-const lastModifiedSpan = document.getElementById('last-modified');
-
-currentYearSpan.textContent = new Date().getFullYear();
-lastModifiedSpan.textContent = document.lastModified; // Gets the last modified date of the document
-
 
