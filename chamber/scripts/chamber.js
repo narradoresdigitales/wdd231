@@ -61,6 +61,7 @@ function displayMembers(members) {
 
         const membership = document.createElement('p');
         membership.textContent = `Membership Level: ${member.membershipLevel}`;
+        membership.style.fontStyle = 'italic';
 
         // Append elements to memberDiv
         memberDiv.appendChild(img);
