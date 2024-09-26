@@ -1,3 +1,22 @@
+@media (min-width: 375px) and (max-width: 424px) {
+    #myButton {
+        font-size: 2rem;
+        border: none; 
+        background: transparent; 
+        cursor: pointer;
+        width: 30px; /* Set a fixed width */
+        height: 60px; /* Set a fixed height */
+        position: absolute; /* Adjust position if needed */
+        top: 55px;
+        right: 20px;
+        z-index: 2000;
+        box-shadow: none;
+        
+    }
+}
+
+
+
 @media (min-width: 425px) and (max-width: 767px) {
     #myButton {
         font-size: 2rem;
@@ -13,6 +32,15 @@
         box-shadow: none;
         
     }
+
+    .chamber-name {
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        color: white;
+        margin-left: 15px;
+    }
+
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -34,7 +62,7 @@
         font-family: 'Roboto', sans-serif;
         font-size: 24px;
         color: white;
-        margin: 0px;
+        margin-left: 10px;
     }
 
 
@@ -42,6 +70,12 @@
             font-size: 14px; /* Slightly smaller font on mobile */
             padding: 8px; /* Adjust padding on mobile */
         }
+
+        #animateMe {
+            display: flex; /* Hide it by default */
+            
+        }
+
     }
 
 
