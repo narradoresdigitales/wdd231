@@ -50,10 +50,18 @@ function displayMembers(members) {
         const address = document.createElement('p');
         address.textContent = member.address;
 
+        const phone = document.createElement('p');
+        phone.textContent = member.phone;
+
+        const membership = document.createElement('p');
+        membership.textContent = `Membership Level: ${member.membershipLevel}`;
+
         // Append elements to memberDiv
         memberDiv.appendChild(img);
         memberDiv.appendChild(name);
         memberDiv.appendChild(address);
+        memberDiv.appendChild(phone);
+        memberDiv.appendChild(membership);
 
         // Append memberDiv to the container
         memberContainer.appendChild(memberDiv);
