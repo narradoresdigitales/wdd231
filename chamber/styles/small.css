@@ -76,11 +76,7 @@ header {
     padding-bottom: 25px;
 }
 
-/* color scheme for content */
-h1, h2 {
-    color: #4E6B31; /* Deep Green */
-    font-weight: 700;
-}
+
 
 h3 {
     color: #37474F; /* Rust Red */
