@@ -61,7 +61,6 @@
 
 body {
     background-color: #F5DEB3; /* Soft Beige */
-    color: #37474F; /* Dark Text */
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
 }
@@ -138,6 +137,7 @@ nav {
     display: flex;
     flex-direction: column;
     transition: max-height 0.5s ease-out;
+
 }
 
 nav ul {
@@ -146,10 +146,12 @@ nav ul {
 
 nav.open {
     display: block;
+    
 }
 
 nav.open ul {
     display: block;
+    
 }
 
 
