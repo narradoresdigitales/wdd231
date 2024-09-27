@@ -7,7 +7,7 @@
 }
 
 .chamber-name {
-    font-family: 'Roboto', sans-serif;
+    
     font-size: 24px;
     color: white;
     margin-left: 20px;
@@ -60,6 +60,7 @@
 
 
 body {
+    font-family: 'Roboto', sans-serif;
     background-color: #F5DEB3; /* Soft Beige */
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
@@ -175,7 +176,6 @@ nav.open ul {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
     gap: 35px; /* Space between items */
     justify-items: center;
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     padding: 25px;
@@ -205,7 +205,6 @@ nav.open ul {
 }
 
 .footer {
-    font-family: 'Roboto', sans-serif;
     background-color: white; 
     color: black;
     text-align: center;
