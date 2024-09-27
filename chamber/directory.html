@@ -44,15 +44,37 @@
     <button id="toggle-view">Toggle View</button>
     <div id="members-container"></div>
 
-    <footer>
-        <p>&copy; <span id="current-year"></span> The Gaucho Chamber of Commerce. All rights reserved.</p>
-        <p>Last modified: <span id="last-modified"></span></p>
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>The Gaucho Chamber of Commerce</p>
+            <p>Avenida de los Gauchos 1234</p>
+            <p>La Pampa, Argentina</p>
+            <p>Email: <a href="mailto:info@gauchochamber.com">info@gauchochamber.com</a></p>
+            <p>Phone: <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+            <p>Website: <a href="https://www.gauchochamber.com" target="_blank">www.gauchochamber.com</a></p>
+        </div>
+
+
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us:</h4>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/GauchoChamber" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com/GauchoChamber" target="_blank">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/GauchoChamber" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section"> 
+            <h4>WDD231 Chamber of Commerce Project</h4>
+            <p>Marcus 'Sil' Palmer</p>
+            <p>&copy; <span id="current-year"></span> The Gaucho Chamber of Commerce. All rights reserved.</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </div>
     </footer>
     
-    <script>
-        // Set the current year and last modified date
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('last-modified').textContent = document.lastModified;
-    </script>
+
 </body>
 </html>

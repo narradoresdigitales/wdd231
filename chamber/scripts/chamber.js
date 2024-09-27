@@ -42,6 +42,7 @@ function displayMembers(members) {
         img.classList.add('icon'); // Add a class for styling
         img.style.width = '100px'; // Set the image width
         img.style.height = '100px'; // Set the image height
+        img.loading = 'lazy'; // Lazy load the images
 
         // Create other member details
         const name = document.createElement('h3');
@@ -87,3 +88,5 @@ toggleButton.addEventListener('click', () => {
     membersContainer.style.display = isGridView ? 'grid' : 'block'; // Change display property for layout
 });
 
+document.getElementById('current-year').textContent = new Date().getFullYear();
+document.getElementById('last-modified').textContent = document.lastModified;

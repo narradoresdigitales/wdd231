@@ -154,6 +154,21 @@ nav.open ul {
     
 }
 
+.member {
+    border: 1px sold #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin: 16px 0;
+    padding: 16px;
+    text-align: center;
+}
+
+.member:hover {
+
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight movement up on hover */
+}
 
 #members-container {
     display: grid; /* Default to grid layout */
@@ -170,7 +185,7 @@ nav.open ul {
 
 .member-card {
     background-color: #f9f9f9; /* Light background for cards */
-    border: 1px solid #ccc; /* Border around cards */
+    border: 1px solid #ccc; /*Border around cards */
     padding: 15px; /* Padding inside cards */
     text-align: center; /* Center text */
     justify-items: center;
@@ -181,21 +196,65 @@ nav.open ul {
     border-bottom: 1px solid #ccc; /* List item border */
     padding: 10px 0; /* Padding for list items */
     
+    
 }
 
 .member-list-item img {
     width: 50px; /* Smaller images for list items */
     height: auto; /* Maintain aspect ratio */
-    
-
 }
 
-footer {
-    background-color: white; /* Pampas Grass Green */
+.footer {
+    font-family: 'Roboto', sans-serif;
+    background-color: white; 
+    color: black;
     text-align: center;
     padding: 10px 0;
     color: #333333 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    border-top: 2px solid #ccc;
+
 }
+
+.footer-section {
+    flex: 1; /* Each section takes equal space */
+    margin: 0 20px; /* Add spacing between sections */
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin: 5px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #0066cc; /* Link color */
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+
+
 
 /* Primary Colors:
 

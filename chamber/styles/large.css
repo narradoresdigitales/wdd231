@@ -4,9 +4,9 @@
         border: none; 
         background: transparent; 
         cursor: pointer;
-        width: 30px; /* Set a fixed width */
-        height: 60px; /* Set a fixed height */
-        position: absolute; /* Adjust position if needed */
+        width: 30px; 
+        height: 60px;
+        position: absolute; 
         top: 55px;
         right: 20px;
         z-index: 2000;
@@ -23,9 +23,9 @@
         border: none; 
         background: transparent; 
         cursor: pointer;
-        width: 30px; /* Set a fixed width */
-        height: 60px; /* Set a fixed height */
-        position: absolute; /* Adjust position if needed */
+        width: 30px; 
+        height: 60px; 
+        position: absolute;
         top: 50px;
         right: 20px;
         z-index: 2000;
@@ -67,18 +67,37 @@
 
 
         #toggle-view {
-            font-size: 14px; /* Slightly smaller font on mobile */
-            padding: 8px; /* Adjust padding on mobile */
+            font-size: 14px; 
+            padding: 8px; 
         }
 
         #animateMe {
-            display: flex; /* Hide it by default */
+            display: flex; 
             
         }
 
+    
     }
 
-
+    @media (max-width: 768px) {
+        .footer {
+            flex-direction: column; 
+            align-items: center;
+            text-align: center;
+        }
+    
+        .footer-section {
+            margin-bottom: 20px; 
+            width: 100%; 
+        }
+    
+        .social-links {
+            display: flex;
+            justify-content: center; 
+            gap: 10px; 
+        }
+    }
+    
 
 
 
