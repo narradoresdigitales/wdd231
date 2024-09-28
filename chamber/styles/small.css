@@ -1,7 +1,7 @@
 
 
 .chamber-image {
-    width: 75;
+    width: 75px;
     height: auto;
     border-radius: 10px;
 }
@@ -156,7 +156,7 @@ nav.open ul {
 }
 
 .member {
-    border: 1px sold #ccc;
+    border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
