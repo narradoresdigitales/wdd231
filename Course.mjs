@@ -21,17 +21,17 @@ const aCourse = {
     changeEnrollment: function (sectionNum, add = true) {
         // find the right section...Array.findIndex will work here
         const sectionIndex = this.sections.findIndex(
-          (section) => section.sectionNum == sectionNum
+        (section) => section.sectionNum == sectionNum
         );
         if (sectionIndex >= 0) {
-          if (add) {
+        if (add) {
             this.sections[sectionIndex].enrolled++;
-          } else {
+        } else {
             this.sections[sectionIndex].enrolled--;
-          }
-          renderSections(this.sections);
         }
-      },
+        renderSections(this.sections);
+        }
+    },
     };
 
 function setCourseInfo(course) {
