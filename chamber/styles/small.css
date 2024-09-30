@@ -254,24 +254,38 @@ nav.open ul {
 
 
 
+/* HOME PAGE*/
 
-/* Primary Colors:
 
-Deep Earth Brown (#4E342E): Represents the leather of the gaucho's gear and the earthy landscape of the pampas.
-Saddle Leather Tan (#A67C52): A lighter leather tone, reflecting the materials used in boots, saddles, and belts.
-Gaucho Red (#B71C1C): A bold color that reflects the traditional red used in ponchos, flags, and gaucho accessories.
-Secondary Colors:
+.hero {
+    background-image: url("../images/gaucho-hero.png"); /* Replace with the actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 65vh; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
 
-Pampas Grass Green (#8BC34A): A muted green reminiscent of the grasslands where the gauchos live and work.
-Sky Blue (#42A5F5): Represents the Argentine sky, which is often clear and expansive, and also ties into the colors of the Argentine flag.
-Light Wheat (#F5DEB3): A soft wheat or beige tone, evoking the farmlands and open plains.
-Accent Colors:
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make the text more readable */
+    padding: 20px;
+    border-radius: 10px;
+}
 
-Silver (#B0BEC5): To represent the silver details in gaucho belts and knives (facón). This can add a metallic, elegant touch.
-Charcoal Gray (#37474F): A neutral but strong color for text and backgrounds, balancing the more rustic tones of the palette.
-Example Color Pairing for Web Elements:
-Header/Navigation: Deep Earth Brown background with Gaucho Red highlights.
-Buttons/Calls to Action: Gaucho Red or Saddle Leather Tan for high visibility.
-Text: Charcoal Gray for body text, Sky Blue or Pampas Green for links or emphasis.
-Background: Light Wheat or Pampas Grass Green for soft, neutral backgrounds that keep the site light and inviting.
-*/
+.cta-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
