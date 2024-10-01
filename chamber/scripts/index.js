@@ -39,6 +39,7 @@ function createEventCard(event) {
     const eventTitle = document.createElement('h3');
     eventTitle.textContent = event.title;
     eventTitle.style.color = 'brown';
+    eventTitle.style.fontWeight = 'bold';
 
     const eventDate = document.createElement('p');
     eventDate.textContent = `Date: ${event.date}`;
@@ -121,14 +122,27 @@ async function fetchBusinessHighlights() {
 function displayHighlight(highlight) {
     const highlightContainer = document.getElementById('business-highlight');
     if (highlightContainer) {
-        highlightContainer.innerHTML = `
-            <h3>${highlight.name}</h3>
-            <p>${highlight.highlight}</p>
-        `;
+        // Clear the previous content
+        highlightContainer.innerHTML = ''; 
+
+        // Create elements for the highlight
+        const nameElement = document.createElement('h3');
+        nameElement.textContent = highlight.name;
+        nameElement.style.color = 'darkgreen'; // Styling the name
+        nameElement.style.fontWeight = 'bold'; // Example additional styling
+
+        const highlightElement = document.createElement('p');
+        highlightElement.textContent = highlight.highlight;
+        highlightElement.style.fontStyle = 'italic'; // Styling the highlight
+
+        // Append the created elements to the highlight container
+        highlightContainer.appendChild(nameElement);
+        highlightContainer.appendChild(highlightElement);
     } else {
         console.error('Highlight container not found');
     }
 }
+
 
 // Function to display the next highlight
 function displayNextHighlight() {
@@ -165,22 +179,50 @@ async function fetchCurrentWeather() {
 }
 
 // Function to display current weather
+// Function to display current weather
 function displayCurrentWeather(data) {
     const weatherContainer = document.getElementById('current-weather');
     if (data && data.main) {
         const iconCode = data.weather[0].icon; // Get the icon code
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // Construct the icon URL
 
-        weatherContainer.innerHTML = `
-            <h3>${data.name} Current Weather</h3>
-            <img src="${iconUrl}" alt="${data.weather[0].description}" />
-            <p>Temperature: ${data.main.temp} °C</p>
-            <p>Weather: ${data.weather[0].description}</p>
-        `;
+        // Clear previous content
+        weatherContainer.innerHTML = '';
+
+        // Create elements for displaying weather information
+        const weatherTitle = document.createElement('h3');
+        weatherTitle.textContent = `${data.name} Current Weather`;
+        weatherTitle.style.color = 'brown'; // Title color
+        weatherTitle.style.fontSize = '24px'; // Title font size
+        weatherTitle.style.marginBottom = '10px'; // Space below the title
+
+        const weatherIcon = document.createElement('img');
+        weatherIcon.src = iconUrl;
+        weatherIcon.alt = data.weather[0].description;
+        weatherIcon.style.width = '100px'; // Icon size
+        weatherIcon.style.marginBottom = '10px'; // Space below the icon
+
+        const roundedTemp = Math.round(data.main.temp);
+        const weatherTemp = document.createElement('p');
+        weatherTemp.textContent = `Temperature: ${roundedTemp} °C`;
+        weatherTemp.style.color = 'blue'; // Temperature color
+        weatherTemp.style.fontSize = '18px'; // Temperature font size
+
+        const weatherDescription = document.createElement('p');
+        weatherDescription.textContent = `Weather: ${data.weather[0].description}`;
+        weatherDescription.style.fontStyle = 'italic'; // Italic style for description
+        weatherDescription.style.fontSize = '16px'; // Description font size
+
+        // Append all elements to the weather container
+        weatherContainer.appendChild(weatherTitle);
+        weatherContainer.appendChild(weatherIcon);
+        weatherContainer.appendChild(weatherTemp);
+        weatherContainer.appendChild(weatherDescription);
     } else {
         weatherContainer.innerHTML = '<p>Error: Weather data not available.</p>';
     }
 }
+
 
 // Fetch 3-day forecast
 async function fetchForecast() {
