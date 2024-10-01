@@ -1,22 +1,37 @@
-// Fetch and display events from the events.JSON file
+// Function to fetch events from the events.json file
+async function fetchAndDisplayEvents() {
+    try {
+        const response = await fetch('data/events.json'); // Update the path to your JSON file
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const events = await response.json();
+        displayFirstEvent(events);  // Display the first event when the page loads
+        setupShowMoreButton(events);  // Setup the "Show More Events" button
+    } catch (error) {
+        console.error('Error fetching events:', error);
+    }
+}
 
-fetch('../data/index.json')
-    .then(response => response.json())
-    .then(data => {
-        const eventsContainer = document.getElementById('events');
-        data.forEach(event => {
-            const eventElement = document.createElement('div');
-            eventElement.classList.add('event-card'); // Add a class for styling
+// Display the first event
+function displayFirstEvent(events) {
+    const eventsContainer = document.getElementById('events');
+    const firstEvent = events[0];  // Grab the first event from the array
 
-            eventElement.innerHTML = `
-                <h4>${event.title}</h4>
-                <p><strong>Date:</strong> ${event.date}</p>
-                <p><strong>Time:</strong> ${event.time}</p>
-                <p><strong>Location:</strong> ${event.location}</p>
-                <p>${event.description}</p>
-            `;
+    const eventCard = createEventCard(firstEvent);
+    eventsContainer.appendChild(eventCard);
+}
 
-            eventsContainer.appendChild(eventElement);
-        });
-    })
-    .catch(error => console.error('Error loading events:', error));
+// Create event card (for both initial and additional events)
+function createEventCard(event) {
+    const eventCard = document.createElement('div');
+    eventCard.classList.add('event-card');  // Add your styling class
+
+    const eventTitle = document.createElement('h3');
+    eventTitle.textContent = event.title;
+
+    const eventDate = document.createElement('p');
+    eventDate.textContent = `Date: ${event.date}`;
+
+    const eventDescription = document.createElement('p');
+    eventDescription.text
