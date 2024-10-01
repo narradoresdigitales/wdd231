@@ -257,12 +257,20 @@ function displayForecast(data) {
         
         const forecastCard = document.createElement('div');
         forecastCard.classList.add('forecast-card'); // Add a class for styling
+        
+        //Create the temperature element
+        const tempElement =document.createElement('p');
+        tempElement.textContent = `Temperature: ${roundedTemp} °C `;
+        tempElement.style.color = 'blue';
+        
         forecastCard.innerHTML = `
             <h4>${new Date(dayForecast.dt * 1000).toLocaleDateString()}</h4>
             <img src="${iconUrl}" alt="${dayForecast.weather[0].description}" />
-            <p>Temperature: ${roundedTemp} °C</p>
+            
             <p>Weather: ${dayForecast.weather[0].description}</p>
         `;
+
+        forecastCard.insertBefore(tempElement, forecastCard.querySelector('p'));
         forecastContainer.appendChild(forecastCard);
     }
 }
