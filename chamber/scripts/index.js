@@ -40,6 +40,7 @@ function createEventCard(event) {
     eventTitle.textContent = event.title;
     eventTitle.style.color = 'brown';
     eventTitle.style.fontWeight = 'bold';
+    eventTitle.style.fontSize = '20px';
 
     const eventDate = document.createElement('p');
     eventDate.textContent = `Date: ${event.date}`;
@@ -130,6 +131,7 @@ function displayHighlight(highlight) {
         nameElement.textContent = highlight.name;
         nameElement.style.color = 'darkgreen'; // Styling the name
         nameElement.style.fontWeight = 'bold'; // Example additional styling
+        nameElement.style.fontSize = '20px';
 
         const highlightElement = document.createElement('p');
         highlightElement.textContent = highlight.highlight;
