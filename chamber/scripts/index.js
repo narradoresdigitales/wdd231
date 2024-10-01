@@ -252,6 +252,7 @@ function displayForecast(data) {
         const iconCode = dayForecast.weather[0].icon; // Get the icon code
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // Construct the icon URL
 
+    //Round the temperature
         const roundedTemp = Math.round(dayForecast.main.temp);
         
         const forecastCard = document.createElement('div');
