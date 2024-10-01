@@ -11,8 +11,7 @@ async function fetchAndDisplayEvents() {
         }
         const events = await response.json();
         displayFirstEvent(events);  // Display the first event when the page loads
-        setupShowMoreButton(events);  // Setup the "See More Events" button
-        setupShowLessButton();          // Setup the "See Less Events" button
+        setupShowMoreButton(events);  // Setup the "Show More Events" button
     } catch (error) {
         console.error('Error fetching events:', error);
     }
@@ -55,37 +54,33 @@ function createEventCard(event) {
 
 // Setup "Show More Events" button
 function setupShowMoreButton(events) {
+    let currentIndex = 1;  // Start after the first event
     const showMoreBtn = document.getElementById('more-events');
-    const eventsContainer = document.getElementById('events'); 
-    let isExpanded = false;  // Track if the events are currently expanded
-
-    showMoreBtn.addEventListener('click', () => {
-        if (!isExpanded) {
-            // Show all remaining events
-            for (let i = 1; i < events.length; i++) {  // Start from the second event
-                const eventCard = createEventCard(events[i]);
-                eventsContainer.appendChild(eventCard);
-            }
-            showMoreBtn.style.display = 'none';  // Hide the "See More" button
-            document.getElementById('less-events').style.display = 'block';  // Show "See Less" button
-            isExpanded = true;  // Set to true as events are now expanded
-        }
-    });
-}
-
-// Setup "Show Less Events" button
-function setupShowLessButton() {
     const showLessBtn = document.getElementById('less-events');
     const eventsContainer = document.getElementById('events');
 
+    showMoreBtn.addEventListener('click', () => {
+        if (currentIndex < events.length) {
+            const nextEvent = events[currentIndex];
+            const eventCard = createEventCard(nextEvent);
+            eventsContainer.appendChild(eventCard);
+            currentIndex++;
+
+            // If we've displayed all events, hide the "See More" button
+            if (currentIndex >= events.length) {
+                showMoreBtn.style.display = 'none';  
+            }
+            showLessBtn.style.display = 'inline-block'; // Show the "See Less" button
+        }
+    });
+
     showLessBtn.addEventListener('click', () => {
-        // Clear all event cards except for the first one
+        // Hide all events after the first one
         while (eventsContainer.children.length > 1) {
             eventsContainer.removeChild(eventsContainer.lastChild);
         }
-        
-        // Hide "See Less" button and show "See More" button
-        showLessBtn.style.display = 'none';  // Hide the "See Less" button
-        document.getElementById('more-events').style.display = 'block';  // Show "See More" button
+        currentIndex = 1; // Reset currentIndex to only display the first event
+        showLessBtn.style.display = 'none'; // Hide the "See Less" button
+        showMoreBtn.style.display = 'inline-block'; // Show the "See More" button
     });
 }
