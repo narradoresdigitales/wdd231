@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/index.js" defer></script>
-    <script src="scripts/chamber.js" defer></script> 
+    
         
     <!-- social media meta settings-->
     <meta property="og:title" content="Marcus 'The Gaucho Chamber of Commerce">
@@ -54,20 +54,19 @@
     <section class="current-events">
         <h2>Current Events</h2>
             <div class="content-cards">
-                
                 <div class="card">
                 <h3>Upcoming Events</h3>
                 <p>Stay informed about our business meetups, workshops, and networking events.</p>
                 </div>
-
             </div>
+
             <!-- JavaScript will populate this section with event data -->
             <div id="events" class="events-list"></div>
-            </div>
-            <!-- dynamically display more events-->
-            <button>See More Events</button>
-
             
+
+            <!-- dynamically display more events-->
+            <button id="more-events">See More Events</button>
+            <button id="less-events" style="display: none;"> See Less Events</button>
     </section>
 
     <section class="company-spotlights">

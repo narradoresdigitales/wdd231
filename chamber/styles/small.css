@@ -289,3 +289,26 @@ nav.open ul {
 .cta-btn:hover {
     background-color: #0056b3;
 }
+
+/* Styling Event buttons*/
+
+/* Button Styles */
+button {
+    padding: 10px 20px;  /* Add some padding */
+    background-color: brown;  /* Primary color */
+    color: white;  /* Text color */
+    border: none;  /* Remove default border */
+    border-radius: 5px;  /* Rounded corners */
+    cursor: pointer;  /* Change cursor on hover */
+    font-size: 16px;  /* Font size */
+    transition: background-color 0.3s ease;  /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #0056b3;  /* Darker shade on hover */
+}
+
+button:disabled {
+    background-color: #c0c0c0;  /* Grey color for disabled button */
+    cursor: not-allowed;  /* Change cursor to not-allowed */
+}
