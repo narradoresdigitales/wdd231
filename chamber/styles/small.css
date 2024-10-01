@@ -256,9 +256,19 @@ nav.open ul {
 
 /* HOME PAGE*/
 
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Neutral background for the entire page */
+    color: #333; /* Dark text for readability */
+    text-align: center;
+}
 
+/* Hero Section */
 .hero {
-    background-image: url("../images/gaucho-hero.png"); /* Replace with the actual path */
+    background-image: url("../images/gaucho-hero.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -272,43 +282,114 @@ nav.open ul {
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make the text more readable */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 20px;
     border-radius: 10px;
 }
 
-.cta-btn {
-    background-color: brown;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.cta-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Styling Event buttons*/
-
 /* Button Styles */
 button {
-    padding: 10px 20px;  /* Add some padding */
-    background-color: brown;  /* Primary color */
-    color: white;  /* Text color */
-    border: none;  /* Remove default border */
-    border-radius: 5px;  /* Rounded corners */
-    cursor: pointer;  /* Change cursor on hover */
-    font-size: 16px;  /* Font size */
-    transition: background-color 0.3s ease;  /* Smooth background color transition */
+    padding: 10px 20px; /* Add some padding */
+    background-color: brown; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 button:hover {
-    background-color: #0056b3;  /* Darker shade on hover */
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
 button:disabled {
-    background-color: #c0c0c0;  /* Grey color for disabled button */
-    cursor: not-allowed;  /* Change cursor to not-allowed */
+    background-color: #c0c0c0; /* Grey color for disabled button */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+/* Current Events Section */
+.current-events {
+    border-left: 4px solid #005B5D; /* Teal left border */
+    background-color: #fff; /* White background for contrast */
+    padding: 20px; /* Add padding */
+    margin: 20px 0; /* Space between sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.events-list {
+    margin-top: 10px;
+}
+
+/* Business Spotlight Section */
+.business-highlight-section {
+    border-left: 4px solid #FFC107; /* Gold left border */
+    background-color: #fff; /* White background for contrast */
+    padding: 20px; /* Add padding */
+    margin: 20px 0; /* Space between sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#business-highlight {
+    font-style: italic; /* Italicize business highlights */
+}
+
+/* Membership Benefits Section */
+.membership-benefits {
+    border-left: 4px solid #007BFF; /* Blue left border */
+    background-color: #fff; /* White background for contrast */
+    padding: 20px; /* Add padding */
+    margin: 20px 0; /* Space between sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.benefit-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Light gray separator */
+}
+
+.benefit-item:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+/* Weather Section */
+.weather-section {
+    padding: 20px;
+    background-color: #E3F2FD; /* Light blue background */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 20px; /* Space from the above section */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#current-weather img {
+    width: 50px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#weather-info {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Forecast Card */
+.forecast-card {
+    border: 1px solid #ccc; /* Border for forecast cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    margin: 10px;
+    text-align: center; /* Center text in the card */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width on small screens */
+    }
 }

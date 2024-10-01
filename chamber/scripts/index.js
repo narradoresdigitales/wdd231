@@ -38,12 +38,14 @@ function createEventCard(event) {
 
     const eventTitle = document.createElement('h3');
     eventTitle.textContent = event.title;
+    eventTitle.style.color = 'brown';
 
     const eventDate = document.createElement('p');
     eventDate.textContent = `Date: ${event.date}`;
 
     const eventDescription = document.createElement('p');
     eventDescription.textContent = event.description;
+    eventDescription.style.fontStyle = 'italic';
 
     eventCard.appendChild(eventTitle);
     eventCard.appendChild(eventDate);
@@ -141,3 +143,85 @@ function displayNextHighlight() {
     }
 }
 
+// OpenWeatherMap API //
+
+const API_KEY = 'c8abeb5e74b7a560b8f2dce0867293ee'; // Replace with your actual API key
+const LAT = '-36.5'; // Latitude for La Pampa
+const LON = '-64.3'; // Longitude for La Pampa
+
+// Fetch current weather
+async function fetchCurrentWeather() {
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=metric`;
+    try {
+        const response = await fetch(weatherURL);
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const data = await response.json();
+        displayCurrentWeather(data);
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
+}
+
+// Function to display current weather
+function displayCurrentWeather(data) {
+    const weatherContainer = document.getElementById('current-weather');
+    if (data && data.main) {
+        const iconCode = data.weather[0].icon; // Get the icon code
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // Construct the icon URL
+
+        weatherContainer.innerHTML = `
+            <h3>${data.name} Current Weather</h3>
+            <img src="${iconUrl}" alt="${data.weather[0].description}" />
+            <p>Temperature: ${data.main.temp} °C</p>
+            <p>Weather: ${data.weather[0].description}</p>
+        `;
+    } else {
+        weatherContainer.innerHTML = '<p>Error: Weather data not available.</p>';
+    }
+}
+
+// Fetch 3-day forecast
+async function fetchForecast() {
+    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&appid=${API_KEY}&units=metric`;
+    try {
+        const response = await fetch(forecastURL);
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const data = await response.json();
+        displayForecast(data);
+    } catch (error) {
+        console.error('Error fetching forecast data:', error);
+    }
+}
+
+// Function to display the 3-day forecast
+function displayForecast(data) {
+    const forecastContainer = document.getElementById('forecast-data');
+    forecastContainer.innerHTML = ''; // Clear previous forecast data
+
+    // Loop through the forecast data
+    for (let i = 0; i < data.list.length; i += 8) { // Each day has data every 3 hours, so we take every 8th item
+        const dayForecast = data.list[i];
+        const iconCode = dayForecast.weather[0].icon; // Get the icon code
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // Construct the icon URL
+        
+        const forecastCard = document.createElement('div');
+        forecastCard.classList.add('forecast-card'); // Add a class for styling
+        forecastCard.innerHTML = `
+            <h4>${new Date(dayForecast.dt * 1000).toLocaleDateString()}</h4>
+            <img src="${iconUrl}" alt="${dayForecast.weather[0].description}" />
+            <p>Temperature: ${dayForecast.main.temp} °C</p>
+            <p>Weather: ${dayForecast.weather[0].description}</p>
+        `;
+        forecastContainer.appendChild(forecastCard);
+    }
+}
+
+// Call the functions to fetch weather data
+document.addEventListener('DOMContentLoaded', () => {
+    fetchCurrentWeather();
+    fetchForecast();
+});
