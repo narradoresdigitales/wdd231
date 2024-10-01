@@ -84,3 +84,60 @@ function setupShowMoreButton(events) {
         showMoreBtn.style.display = 'inline-block'; // Show the "See More" button
     });
 }
+
+// BUSINESS HIGHLIGHTS // 
+
+
+let highlights = [];  // Array to store fetched highlights
+let currentHighlightIndex = 0;  // Index to track the current highlight
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchBusinessHighlights();  // Fetch highlights when the DOM is loaded
+
+    // Setup button click event
+    const moreHighlightsBtn = document.getElementById('more-business-highlights');
+    if (moreHighlightsBtn) {
+        moreHighlightsBtn.addEventListener('click', displayNextHighlight);
+    }
+});
+
+// Function to fetch business highlights
+async function fetchBusinessHighlights() {
+    try {
+        const response = await fetch('data/business-highlights.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        highlights = await response.json();  // Store highlights in the array
+        displayHighlight(highlights[currentHighlightIndex]);  // Display the first highlight
+    } catch (error) {
+        console.error('Error fetching highlights:', error);
+    }
+}
+
+// Function to display a highlight
+function displayHighlight(highlight) {
+    const highlightContainer = document.getElementById('business-highlight');
+    if (highlightContainer) {
+        highlightContainer.innerHTML = `
+            <h3>${highlight.name}</h3>
+            <p>${highlight.highlight}</p>
+        `;
+    } else {
+        console.error('Highlight container not found');
+    }
+}
+
+// Function to display the next highlight
+function displayNextHighlight() {
+    currentHighlightIndex++;
+    
+    // Check if we've reached the end of the highlights array
+    if (currentHighlightIndex < highlights.length) {
+        displayHighlight(highlights[currentHighlightIndex]);  // Display next highlight
+    } else {
+        currentHighlightIndex = 0;  // Reset index to loop back to the start
+        displayHighlight(highlights[currentHighlightIndex]);  // Display the first highlight again
+    }
+}
+
