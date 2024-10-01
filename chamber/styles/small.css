@@ -402,13 +402,3 @@ button:disabled {
     text-align: center; /* Center text in the card */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    section {
-        padding: 15px; /* Reduce padding for smaller screens */
-    }
-
-    button {
-        width: 100%; /* Make buttons full width on small screens */
-    }
-}

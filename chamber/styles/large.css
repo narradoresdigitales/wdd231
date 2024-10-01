@@ -100,7 +100,45 @@
     
 
 
+/* HOMEPAGE */ /* HOMEPAGE */ /* HOMEPAGE */ /* HOMEPAGE */ /* HOMEPAGE */ /* HOMEPAGE */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width on small screens */
+    }
+
+    .current-events, .business-highlight-section, .weather-section {
+        font-size: 18px;
+    }
+
+    .weather-section, #forecast-data {
+        font-size: 18px;
+    }
+}
 
 
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    section {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
 
+    button {
+        width: 100%; /* Make buttons full width on small screens */
+    }
+
+    .current-events, .business-highlight-section, .weather-section {
+        font-size: 22px;
+    }
+
+    .weather-section, #forecast-data {
+        font-size: 22px;
+    }
+}
