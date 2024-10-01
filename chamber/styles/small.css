@@ -366,18 +366,20 @@ button:disabled {
     border-radius: 8px; /* Rounded corners */
     margin-top: 20px; /* Space from the above section */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
     
 }
 
 #current-weather img {
     width: 50px; /* Adjust image size */
     height: auto; /* Maintain aspect ratio */
+    
 }
 
-#weather-info {
+/* #weather-info {
     margin-top: 10px;
     font-size: 18px;
-}
+} */
 
 /* Forecast Card */
 

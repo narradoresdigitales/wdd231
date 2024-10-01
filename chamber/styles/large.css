@@ -114,11 +114,11 @@
     }
 
     .current-events, .business-highlight-section, .weather-section {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .weather-section, #forecast-data {
-        font-size: 22px;
+        font-size: 18px;
     }
 }
 
@@ -135,11 +135,11 @@
     }
 
     .current-events, .business-highlight-section, .weather-section {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     .weather-section, #forecast-data {
-        font-size: 26px;
+        font-size:30px;
         
     }
 }

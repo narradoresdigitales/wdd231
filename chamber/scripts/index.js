@@ -40,7 +40,7 @@ function createEventCard(event) {
     eventTitle.textContent = event.title;
     eventTitle.style.color = 'brown';
     eventTitle.style.fontWeight = 'bold';
-    eventTitle.style.fontSize = '20px';
+    eventTitle.style.fontSize = '22px';
 
     const eventDate = document.createElement('p');
     eventDate.textContent = `Date: ${event.date}`;
@@ -131,7 +131,7 @@ function displayHighlight(highlight) {
         nameElement.textContent = highlight.name;
         nameElement.style.color = 'darkgreen'; // Styling the name
         nameElement.style.fontWeight = 'bold'; // Example additional styling
-        nameElement.style.fontSize = '20px';
+        nameElement.style.fontSize = '22px';
 
         const highlightElement = document.createElement('p');
         highlightElement.textContent = highlight.highlight;
@@ -195,7 +195,7 @@ function displayCurrentWeather(data) {
         const weatherTitle = document.createElement('h3');
         weatherTitle.textContent = `${data.name} Current Weather`;
         weatherTitle.style.color = 'brown'; // Title color
-        weatherTitle.style.fontSize = '24px'; // Title font size
+        weatherTitle.style.fontSize = '22px'; // Title font size
         weatherTitle.style.marginBottom = '10px'; // Space below the title
 
         const weatherIcon = document.createElement('img');
@@ -213,7 +213,7 @@ function displayCurrentWeather(data) {
         const weatherDescription = document.createElement('p');
         weatherDescription.textContent = `Weather: ${data.weather[0].description}`;
         weatherDescription.style.fontStyle = 'italic'; // Italic style for description
-        weatherDescription.style.fontSize = '16px'; // Description font size
+        weatherDescription.style.fontSize = '18px'; // Description font size
 
         // Append all elements to the weather container
         weatherContainer.appendChild(weatherTitle);
@@ -241,7 +241,7 @@ async function fetchForecast() {
     }
 }
 
-// Function to display the 3-day forecast
+// Function to display the 5-day forecast
 function displayForecast(data) {
     const forecastContainer = document.getElementById('forecast-data');
     forecastContainer.innerHTML = ''; // Clear previous forecast data
