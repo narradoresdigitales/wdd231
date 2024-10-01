@@ -180,7 +180,7 @@ async function fetchCurrentWeather() {
     }
 }
 
-// Function to display current weather
+
 // Function to display current weather
 function displayCurrentWeather(data) {
     const weatherContainer = document.getElementById('current-weather');
@@ -251,13 +251,15 @@ function displayForecast(data) {
         const dayForecast = data.list[i];
         const iconCode = dayForecast.weather[0].icon; // Get the icon code
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // Construct the icon URL
+
+        const roundedTemp = Math.round(dayForecast.main.temp);
         
         const forecastCard = document.createElement('div');
         forecastCard.classList.add('forecast-card'); // Add a class for styling
         forecastCard.innerHTML = `
             <h4>${new Date(dayForecast.dt * 1000).toLocaleDateString()}</h4>
             <img src="${iconUrl}" alt="${dayForecast.weather[0].description}" />
-            <p>Temperature: ${dayForecast.main.temp} °C</p>
+            <p>Temperature: ${roundedTemp} °C</p>
             <p>Weather: ${dayForecast.weather[0].description}</p>
         `;
         forecastContainer.appendChild(forecastCard);
