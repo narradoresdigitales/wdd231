@@ -389,8 +389,8 @@ button:disabled {
     text-align: center;
     color: white;
     border: 1px solid #ccc;
-    border-left: 10px solid tan; /* brown left border */
-    border-right: 10px solid tan; /* brown right border */
+    border-left: 10px solid #f7e7ce; /* brown left border */
+    border-right: 10px solid #f7e7ce; /* brown right border */
     background-color: brown;
     border-radius: 8px; /* Rounded corners */
     margin-left: auto;
@@ -403,8 +403,9 @@ button:disabled {
     padding: 10px;
     margin: 10px;
     text-align: center; /* Center text in the card */
+    background-color: #f7e7ce;
+    border-left: 10px solid brown; /* brown left border */
+    border-right: 10px solid brown; /* brown right border */
 }
 
-#forecast-data {
-    background-color: #f7e7ce;
-}
+

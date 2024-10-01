@@ -194,9 +194,13 @@ function displayCurrentWeather(data) {
         // Create elements for displaying weather information
         const weatherTitle = document.createElement('h3');
         weatherTitle.textContent = `${data.name} Current Weather`;
-        weatherTitle.style.color = 'brown'; // Title color
+        weatherTitle.style.color = 'black'; // Title color
+        weatherTitle.style.backgroundColor = '#f7e7ce';
+        weatherTitle.style.borderRadius = '8px';
         weatherTitle.style.fontSize = '22px'; // Title font size
         weatherTitle.style.marginBottom = '10px'; // Space below the title
+        weatherTitle.style.paddingLeft = '3px';
+        weatherTitle.style.paddingRight = '3px';
 
         const weatherIcon = document.createElement('img');
         weatherIcon.src = iconUrl;
