@@ -133,14 +133,14 @@ function displayHighlight(highlight) {
         nameElement.style.fontWeight = 'bold'; // Example additional styling
         nameElement.style.fontSize = '22px';
 
-        // //add image
-        // const imageElement = document.createElement('img');
-        // img.src = highlight.image;
-        // img.alt = highlight.name;
-        // img.classList.add('icon');
-        // img.style.width = '100px';
-        // img.style.height = '100px';
-        // img.loading = 'lazy';
+        //add image
+        const imageElement = document.createElement('img');
+        imageElement.src = highlight.image;
+        imageElement.alt = highlight.name;
+        imageElement.classList.add('icon');
+        imageElement.style.width = '100px';
+        imageElement.style.height = '100px';
+        imageElement.loading = 'lazy';
 
         //add phone number
         const phoneElement = document.createElement('h2');
@@ -167,7 +167,7 @@ function displayHighlight(highlight) {
         highlightElement.style.fontStyle = 'italic'; // Styling the highlight
 
         // Append the created elements to the highlight container
-        // highlightContainer.appendChild(imageElement);
+        highlightContainer.appendChild(imageElement);
         highlightContainer.appendChild(nameElement);
         highlightContainer.append(phoneElement);
         highlightContainer.appendChild(websiteElement);
