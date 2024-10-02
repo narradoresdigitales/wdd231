@@ -133,12 +133,45 @@ function displayHighlight(highlight) {
         nameElement.style.fontWeight = 'bold'; // Example additional styling
         nameElement.style.fontSize = '22px';
 
+        // //add image
+        // const imageElement = document.createElement('img');
+        // img.src = highlight.image;
+        // img.alt = highlight.name;
+        // img.classList.add('icon');
+        // img.style.width = '100px';
+        // img.style.height = '100px';
+        // img.loading = 'lazy';
+
+        //add phone number
+        const phoneElement = document.createElement('h2');
+        phoneElement.textContent = highlight.phone;
+        phoneElement.style.fontSize = '22px';
+
+        //add website
+
+        const websiteElement = document.createElement('h2');
+        websiteElement.textContent = highlight.website;
+        websiteElement.style.fontSize = '22px';
+
+        //add membership level
+
+        const membershipLevelElement = document.createElement('h2');
+        membershipLevelElement.textContent = `Membership Level ${highlight.membershipLevel}`;
+        membershipLevelElement.style.fontSize = '22px';
+
+
+        //add highlight
         const highlightElement = document.createElement('p');
         highlightElement.textContent = highlight.highlight;
+        highlightElement.style.fontSize = '22px';
         highlightElement.style.fontStyle = 'italic'; // Styling the highlight
 
         // Append the created elements to the highlight container
+        // highlightContainer.appendChild(imageElement);
         highlightContainer.appendChild(nameElement);
+        highlightContainer.append(phoneElement);
+        highlightContainer.appendChild(websiteElement);
+        highlightContainer.appendChild(membershipLevelElement);
         highlightContainer.appendChild(highlightElement);
     } else {
         console.error('Highlight container not found');
