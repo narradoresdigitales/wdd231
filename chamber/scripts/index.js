@@ -156,7 +156,7 @@ function displayHighlight(highlight) {
         //add membership level
 
         const membershipLevelElement = document.createElement('h2');
-        membershipLevelElement.textContent = `Membership Level ${highlight.membershipLevel}`;
+        membershipLevelElement.textContent = `Membership Level: ${highlight.membershipLevel}`;
         membershipLevelElement.style.fontSize = '22px';
 
 
