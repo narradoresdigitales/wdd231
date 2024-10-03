@@ -6,7 +6,7 @@
         "phone": "+54 11 1234-5678",
         "website": "http://elgaucho.com",
         "image": "images/el-gaucho-steak-house.png",
-        "membershipLevel": 3,
+        "membershipLevel": "3",
         "info": "Premium Argentine steakhouse with traditional dishes."
     },
     {
@@ -60,7 +60,7 @@
         "phone": "+54 221 1234-5678",
         "website": "http://matecrafters.com",
         "image": "images/mate-crafters.png",
-        "membershipLevel": 3,
+        "membershipLevel": "gold",
         "info": "Custom yerba mate brewing tools and accessories."
     }
 ]
