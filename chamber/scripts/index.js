@@ -85,7 +85,7 @@ function setupShowMoreButton(events) {
         }
         currentIndex = 1; // Reset currentIndex to only display the first event
         showLessBtn.style.display = 'none'; // Hide the "See Less" button
-        showMoreBtn.style.display = 'inline-block'; // Show the "See More" button
+        showMoreBtn.style.display = 'block'; // Show the "See More" button
     });
 }
 
@@ -96,7 +96,7 @@ let highlights = [];  // Array to store fetched highlights
 let currentHighlightIndex = 0;  // Index to track the current highlight
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetchBusinessHighlights();  // Fetch highlights when the DOM is loaded
+    fetchBusinessHighlights();  
 
     // Setup button click event
     const moreHighlightsBtn = document.getElementById('more-business-highlights');
@@ -112,8 +112,8 @@ async function fetchBusinessHighlights() {
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
-        highlights = await response.json();  // Store highlights in the array
-        displayHighlight(highlights[currentHighlightIndex]);  // Display the first highlight
+        highlights = await response.json(); 
+        displayHighlight(highlights[currentHighlightIndex]);  
     } catch (error) {
         console.error('Error fetching highlights:', error);
     }
@@ -129,8 +129,8 @@ function displayHighlight(highlight) {
         // Create elements for the highlight
         const nameElement = document.createElement('h3');
         nameElement.textContent = highlight.name;
-        nameElement.style.color = 'darkgreen'; // Styling the name
-        nameElement.style.fontWeight = 'bold'; // Example additional styling
+        nameElement.style.color = 'darkgreen'; 
+        nameElement.style.fontWeight = 'bold'; 
         nameElement.style.fontSize = '22px';
 
         //add image
@@ -163,7 +163,7 @@ function displayHighlight(highlight) {
         const highlightElement = document.createElement('p');
         highlightElement.textContent = highlight.highlight;
         highlightElement.style.fontSize = '22px';
-        highlightElement.style.fontStyle = 'italic'; // Styling the highlight
+        highlightElement.style.fontStyle = 'italic'; 
 
         // Append the created elements to the highlight container
         highlightContainer.appendChild(imageElement);
