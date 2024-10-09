@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -81,10 +85,69 @@
         
         <!-- Hidden timestamp field -->
             <input type="hidden" id="timestamp" name="timestamp">
-            <input type="submit" value="Join The Gaucho Chamber of Commerce">
+            <input type="submit" value="Apply for Membership">
         </form>
         <div class="error" id="error-message"></div>
     </div>
+
+    <!-- Membership Level Cards -->
+    <div class="membership-cards">
+        <div class="card" onclick="openModal('modalNonProfit')">
+            <h4>Non-profit</h4>
+            <p>Learn more about the benefits of being a Non-profit member.</p>
+        </div>
+    
+        <div class="card" onclick="openModal('modalBronze')">
+            <h4>Bronze</h4>
+            <p>Learn more about the benefits of Bronze membership.</p>
+        </div>
+    
+        <div class="card" onclick="openModal('modalSilver')">
+            <h4>Silver</h4>
+            <p>Learn more about the benefits of Silver membership.</p>
+        </div>
+        
+        <div class="card" onclick="openModal('modalGold')">
+            <h4>Gold</h4>
+            <p>Learn more about the benefits of Gold membership.</p>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modalNonProfit" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalNonProfit')">&times;</span>
+            <h3>Benefits of Non-profit Membership</h3>
+            <p>Details about Non-profit membership benefits...</p>
+        </div>
+    </div>
+
+    <div id="modalBronze" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalBronze')">&times;</span>
+            <h3>Benefits of Bronze Membership</h3>
+            <p>Details about Bronze membership benefits...</p>
+        </div>
+    </div>
+
+    <div id="modalSilver" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalSilver')">&times;</span>
+            <h3>Benefits of Silver Membership</h3>
+            <p>Details about Silver membership benefits...</p>
+        </div>
+    </div>
+
+    <div id="modalGold" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalGold')">&times;</span>
+            <h3>Benefits of Gold Membership</h3>
+            <p>Details about Gold membership benefits...</p>
+        </div>
+    </div>
+
+
+
     
 </main>
 
