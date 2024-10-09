@@ -411,113 +411,129 @@ button:disabled {
 
 /* JOIN PAGE */     /* JOIN PAGE */         /* JOIN PAGE */     /* JOIN PAGE */
 
-/* Form Container */
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9; /* Light background for contrast */
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
 }
 
 h1, h3 {
-    color: #2c3e50; /* Dark blue for headings */
+    color: #2c3e50;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px; /* Space below the title */
+    margin-bottom: 20px;
 }
 
 /* Form Container */
 .form-container {
-    max-width: 600px; /* Maximum width for the form */
-    margin: 20px auto; /* Center the form */
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff; /* White background for form */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Styles */
 form {
     display: flex;
-    flex-direction: column; /* Stack form elements */
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Label Styles */
+/* Label and Input Field Styling */
 label {
-    margin-bottom: 15px; /* Space between labels */
-    font-weight: 700; /* Bold for labels */
-    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #333;
+    text-align: left; /* Ensure labels are aligned to the left */
 }
 
-/* Input Styles */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    padding: 10px; /* Inner spacing */
-    border: 1px solid #bdc3c7; /* Border color */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size for inputs */
-    transition: border-color 0.3s; /* Transition for border color */
+label input, label textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
-    border-color: tan; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-}
 
-/* Radio Button Styles */
+
+
+/* Radio Button Group */
 .radio-group {
-    display: flex; /* Flexbox for alignment */
-    justify-content: space-between; /* Space between radio buttons */
-    margin-bottom: 15px; /* Space below the group */
+    display: flex;          
+    flex-direction: row; 
+    align-self: center;
 }
 
 .radio-group label {
-    flex: 1; /* Each label takes equal space */
-    text-align: center; /* Center align the text */
+    display: flex;         
+    align-items: center;   
+    margin-bottom: 10px;   
+    padding-right: 30px;
 }
 
 .radio-group input[type="radio"] {
+    padding-right: 15px;
     margin-right: 10px;
+    
+
 }
 
-/* Textarea Styles */
+@media (max-width: 768px) {
+    .radio-group {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+}
+
+.description {
+    margin-top: 25px;
+}
+
+
+
+
+
+/* Textarea */
 textarea {
-    resize: vertical; /* Allow vertical resize only */
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
 }
 
-/* Submit Button Styles */
+/* Submit Button */
 input[type="submit"] {
-    background-color: brown; /* Primary color for button */
-    color: white; /* White text */
-    border: none; /* Remove border */
-    padding: 10px 15px; /* Padding for button */
-    font-size: 18px; /* Font size for button */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Transition for background color */
-    margin-top: 10px; /* Space above the button */
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #2980b9; /* Darker blue on hover */
+    background-color: rgb(80, 47, 3);
 }
 
-/* Error Message Styles */
+/* Error Message */
 .error {
-    color: #e74c3c; /* Red for error messages */
-    font-size: 16px; /* Font size for error */
-    margin-top: 10px; /* Space above the error */
-    text-align: center; /* Center align the error */
+    color: #e74c3c;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
 }
-
 
 
 

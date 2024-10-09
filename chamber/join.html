@@ -59,13 +59,24 @@
 
             <h3>Membership Levels</h3>
             <div class="radio-group">
-            <label><input type="radio" name="member-level" value="Non-profit" > Non-profit </label>
-            <label><input type="radio" name="member-level" value="Bronze" checked>Bronze</label>
-            <label><input type="radio" name="member-level" value="Silver">Silver</label>
-            <label><input type="radio" name="member-level" value="Gold">Gold</label>
+                
+                <label>
+                    <input type="radio" name="member-level" value="Non-profit"><span>Non-profit</span>
+                </label>
+                
+                <label>
+                    <input type="radio" name="member-level" value="Bronze" checked><span>Bronze</span>
+                </label>
+
+                <label><input type="radio" name="member-level" value="Silver"><span>Silver</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="member-level" value="Gold"><span>Gold</span>
+                </label>
             </div>
         
-            <h3>Business/Organization Description</h3>       
+            <h3 class="description">Business/Organization Description</h3>       
             <textarea id="business-description" name="business-description" rows="4" cols="50" placeholder="Describe your business or organization here..."></textarea>
         
         <!-- Hidden timestamp field -->
