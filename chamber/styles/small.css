@@ -409,3 +409,116 @@ button:disabled {
 }
 
 
+/* JOIN PAGE */     /* JOIN PAGE */         /* JOIN PAGE */     /* JOIN PAGE */
+
+/* Form Container */
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9; /* Light background for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3 {
+    color: #2c3e50; /* Dark blue for headings */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px; /* Maximum width for the form */
+    margin: 20px auto; /* Center the form */
+    padding: 20px;
+    background-color: #fff; /* White background for form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements */
+}
+
+/* Label Styles */
+label {
+    margin-bottom: 15px; /* Space between labels */
+    font-weight: 700; /* Bold for labels */
+    text-align: left;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 10px; /* Inner spacing */
+    border: 1px solid #bdc3c7; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: tan; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Radio Button Styles */
+.radio-group {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between radio buttons */
+    margin-bottom: 15px; /* Space below the group */
+}
+
+.radio-group label {
+    flex: 1; /* Each label takes equal space */
+    text-align: center; /* Center align the text */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Textarea Styles */
+textarea {
+    resize: vertical; /* Allow vertical resize only */
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    background-color: brown; /* Primary color for button */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Padding for button */
+    font-size: 18px; /* Font size for button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for background color */
+    margin-top: 10px; /* Space above the button */
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Error Message Styles */
+.error {
+    color: #e74c3c; /* Red for error messages */
+    font-size: 16px; /* Font size for error */
+    margin-top: 10px; /* Space above the error */
+    text-align: center; /* Center align the error */
+}
+
+
+
+
+/* JOIN PAGE */     /* JOIN PAGE */     /* JOIN PAGE */     /* JOIN PAGE */
