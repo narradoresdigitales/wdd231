@@ -549,6 +549,27 @@ input[type="submit"]:hover {
     flex: 1 1 calc(25% - 20px); /* Responsive sizing */
     text-align: center;
     cursor: pointer; /* Change cursor to indicate clickable */
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out; /* Animation for transform and opacity */
+    opacity: 0; /* Start with opacity 0 */
+    transform: scale(0.8); /* Start slightly smaller */
+    animation: fadeInScale 0.5s forwards; /* Call animation */
+    
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0; /* Start invisible */
+        transform: scale(0.8); /* Start slightly smaller */
+    }
+    50% {
+        opacity: 0.5; /* Midway opacity */
+        transform: scale(1.05); /* Slightly larger for attention */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1); /* Original size */
+    }
 }
 
 .card:hover {
@@ -566,7 +587,7 @@ input[type="submit"]:hover {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
 }
 
 .modal-content {
