@@ -28,7 +28,7 @@ showInfo.innerHTML = `
 <p>Name: ${show("first")} ${show("last")}<p>
 <p>Your Phone: ${show("phone")}</p>
 <p>Business Name: ${show("business")}</p>
-<p>Time Stamp: ${show("time-stamp")} </p>
+<p>Time Stamp: ${show("timestamp")} </p>
 <p>Email: <a href=mailto:${show("email")}">${show('email')}</p>
 
 
