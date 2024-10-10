@@ -588,8 +588,8 @@ input[type="submit"]:hover {
 /* Membership Cards for smaller screens */
 .membership-cards {
     display: flex;
-    /* flex-wrap: wrap;
-    justify-content: space-between; */
+    flex-wrap: wrap;
+    justify-content: space-between; 
     margin-top: 20px;
 }
 
@@ -602,8 +602,8 @@ input[type="submit"]:hover {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 50%; /* Full width */
+    height: 50%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
@@ -614,7 +614,7 @@ input[type="submit"]:hover {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
 }
 
 .close {
@@ -631,12 +631,7 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
-/* Responsive Design
-@media (max-width: 768px) {
-    .card {
-        flex: 1 1 calc(100% - 20px); /* Full width on smaller screens */
-    }
-} */
+
 
 
 
