@@ -488,12 +488,6 @@ label input, label textarea {
 
 }
 
-/* @media (max-width: 768px) {
-    .radio-group {
-        /* flex-direction: column; /* Stack vertically on smaller screens */
-    /* }
-} */ 
-
 .description {
     margin-top: 25px;
 }
