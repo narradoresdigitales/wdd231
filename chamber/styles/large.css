@@ -143,3 +143,13 @@
         
     }
 }
+
+/* @media query for cards on join.html*/
+
+/* Three cards per row for larger screens */
+@media (min-width: 768px) {
+    .card {
+        flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+    }
+}
+
