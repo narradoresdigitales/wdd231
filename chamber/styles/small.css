@@ -675,6 +675,7 @@ input[type="submit"]:hover {
     background-color: #f7f7f7;
     padding: 20px;
     border: 1px solid #ddd;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
 }
@@ -699,21 +700,63 @@ input[type="submit"]:hover {
 }
 
 
-/* background styles for cards */
+/* NonProfit Modal */
 
-#nonProfit {
-    background-color:#007BFF;
+
+
+#nonProfit  {
+    background-color:#E7F1FF;
 }
 
+#nonProfit-benefits {
+    color:  #004B87;
+}
+
+#nonProfit-modal {
+    background-color: #ADD8E6;
+}
+
+
+
+/* Bronze Modal*/
 #bronze {
-    background-color: #CD7F32;
+    background-color: #F7E8D7;
 }
+
+#bronze-benefits {
+    color: #6B4F3B;
+}
+
+#bronze-modal {
+    background-color: #F7E8D7;
+}
+
+/* Silver Modal*/
+
 #silver {
-    background-color: silver;
+    background-color: #F0F0F0;
 }
+
+#silver-benefits {
+    color: #606060;
+}
+
+#silver-modal {
+    background-color: #D3D3D3;
+}
+
+/* Gold Modal*/
 
 #gold {
     background-color: #FFD700
+}
+
+#gold-benefits {
+    color: #FFD700
+}
+
+#gold-modal {
+    background-color: #FFFACD;
 }
 
 /* Full width on small screens */
@@ -758,12 +801,13 @@ input[type="submit"]:hover {
 /* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
+    border-radius: 15%;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 90%; /* Full width */
-    height: 80%; /* Full height */
+    width: 95%; /* Full width */
+    height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
@@ -779,8 +823,11 @@ input[type="submit"]:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
+
+
+
 .modal-content h3 {
-    color: #333; /* Darker text for headings */
+    
     margin-bottom: 10px; /* Space below the heading */
 }
 
@@ -790,7 +837,7 @@ input[type="submit"]:hover {
 }
 
 .modal-content li {
-    margin-bottom: 8px; /* Space between each list item */
+    margin-bottom: 25px; /* Space between each list item */
     line-height: 1.5; /* Increase line height for better readability */
     color: #555; /* Slightly lighter gray for the list items */
 }
