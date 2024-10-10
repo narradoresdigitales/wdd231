@@ -599,24 +599,6 @@ input[type="submit"]:hover {
 
 
 
-/* Cards for medium screens */
-@media (min-width: 425px) and (max-width: 767px) {
-    .card {
-        flex: 1 1 calc(50% - 20px); /* Two cards per row */
-    }
-}
-
-/* Cards for larger screens */
-@media (min-width: 768px) {
-    .card {
-        flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
-    }
-}
-
-
-
-
-
 /* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
