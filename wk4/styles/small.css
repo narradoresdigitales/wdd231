@@ -1,0 +1,641 @@
+
+
+.chamber-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.chamber-name {
+    
+    font-size: 24px;
+    color: white;
+    margin-left: 20px;
+}
+
+
+#animateMe {
+    display: none; /* Hide it by default */
+    transition: all 1s ease; /* Smooth transition */
+}
+
+#animateMe.open {
+    display: block; /* Show when .open is added */
+    position: absolute; /* Keep it positioned absolutely */
+    top: 60px; /* Adjust based on your header height */
+    right: 0; /* Align to the right */
+    background:  #3E2723; /* Set a background color */
+    width: 100%; /* Full width for better touch targets */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Display the menu when active */
+#toggle-view:checked + #animateMe {
+    display: block; /* Show the menu when the toggle is checked */
+    
+}
+
+/* Optional: style for the button to make it look like a hamburger */
+#toggle-view {
+    background-color: transparent; /*Remove default button background */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Adjust font size */
+    color: black; /* Change text color */
+    padding: 10px; /* Add some padding */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Hover state */
+#toggle-view:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light gray background on hover */
+    color: #000; /* Darker text color on hover */
+}
+
+/* Active state */
+#toggle-view:active {
+    background-color: rgba(0, 0, 0, 0.2); /* Darker background when active */
+    color: #000; /* Maintain dark text color */
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5DEB3; /* Soft Beige */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3E2723; /* Deep Earth Brown */
+    padding: 10px;
+    padding-bottom: 25px;
+}
+
+
+
+h3 {
+    color: #37474F; /* Rust Red */
+    font-weight: 400;
+    margin: 0;
+}
+
+
+#myButton {
+    font-size: 2rem;
+    border: none; 
+    background: transparent; 
+    cursor: pointer;
+    width: 30px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    position: absolute; /* Adjust position if needed */
+    top: 55px;
+    right: 20px;
+    z-index: 2000;
+    box-shadow: none;
+    
+} 
+
+#myButton::before {
+    content: "\2630"; /* Hamburger icon */
+    font-size: 2rem;
+    color: #fff;
+    
+}
+
+#myButton.open {
+    border: none;
+    background: none;
+}
+
+#myButton.open::before {
+    content: "x"; /* Close icon */
+    color:#C72C41;
+    
+}
+
+ul.menuLinks {
+    list-style-type: none;
+}
+
+ul.menuLinks li a {
+    padding: .75rem 1vw;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+}
+
+li.current-menu-item a {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.5s ease-out;
+
+}
+
+nav ul {
+    display: none;
+}
+
+nav.open {
+    display: block;
+    
+}
+
+nav.open ul {
+    display: block;
+    
+}
+
+.member {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin: 16px 0;
+    padding: 16px;
+    text-align: center;
+}
+
+.member:hover {
+
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight movement up on hover */
+}
+
+#members-container {
+    display: grid; /* Default to grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 35px; /* Space between items */
+    justify-items: center;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 25px;
+    border-radius: 5px;
+    border: solid;
+}
+
+.member-card {
+    background-color: #f9f9f9; /* Light background for cards */
+    border: 1px solid #ccc; /*Border around cards */
+    padding: 15px; /* Padding inside cards */
+    text-align: center; /* Center text */
+    justify-items: center;
+    
+}
+
+.member-list-item {
+    border-bottom: 1px solid #ccc; /* List item border */
+    padding: 10px 0; /* Padding for list items */
+    
+    
+}
+
+.member-list-item img {
+    width: 50px; /* Smaller images for list items */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.footer {
+    background-color: white; 
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    color: #333333 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    border-top: 2px solid #ccc;
+
+}
+
+.footer-section {
+    flex: 1; /* Each section takes equal space */
+    margin: 0 20px; /* Add spacing between sections */
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin: 5px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #001F3F; /* Link color */
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* HOME PAGE*/ /* HOME PAGE*/ /* HOME PAGE*/ /* HOME PAGE*//* HOME PAGE*/ /* HOME PAGE*/ /* HOME PAGE*/
+
+/* General Styles */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Neutral background for the entire page */
+    color: #333; /* Dark text for readability */
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url("../images/gaucho-hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 65vh; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px; /* Add some padding */
+    background-color: brown; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.cta-btn {
+
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+}
+.cta-btn:hover {
+    background-color: brown; /* Darker shade on hover */
+    
+}
+
+button:disabled {
+    background-color: #c0c0c0; /* Grey color for disabled button */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+/* Current Events Section */
+.current-events {
+    border-left: 4px solid #005B5D; /* Teal left border */
+    border-right:  4px solid #005B5D; /* Teal right border */
+    background-color: #fff; /* White background for contrast */
+    padding: 20px; /* Add padding */
+    margin: 20px 0; /* Space between sections */
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 35px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.events-msg {
+
+    
+    margin-top: -20px;
+    padding-bottom: 10px;
+}
+
+.events-list {
+    margin-top: 10px;
+}
+
+/* Business Spotlight Section */
+.business-highlight-section {
+    border-left: 4px solid #FFC107; /* Gold left border */
+    border-right: 4px solid #FFC107; /* Gold right border */
+    background-color: #fff; /* White background for contrast */
+    padding: 20px; /* Add padding */
+    margin: 20px 0; /* Space between sections */
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+
+/* Weather Section */
+.weather-section {
+    border-left: 4px solid tan; /* brown left border */
+    border-right: 4px solid tan; /* brown right border */
+    padding: 20px;
+    background-color: #E3F2FD; /* Light blue background */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 20px; /* Space from the above section */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+    
+}
+
+#current-weather img {
+    width: 50px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    
+}
+
+/* #weather-info {
+    margin-top: 10px;
+    font-size: 18px;
+} */
+
+/* Forecast Card */
+
+.five-day-forecast {
+    margin-top: 50px;
+    width: 75%;
+    text-align: center;
+    color: white;
+    border: 1px solid #ccc;
+    border-left: 10px solid #f7e7ce; /* brown left border */
+    border-right: 10px solid #f7e7ce; /* brown right border */
+    background-color: brown;
+    border-radius: 8px; /* Rounded corners */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forecast-card {
+    border: 1px solid #ccc; /* Border for forecast cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    margin: 10px;
+    text-align: center; /* Center text in the card */
+    background-color: #f7e7ce;
+    border-left: 10px solid brown; /* brown left border */
+    border-right: 10px solid brown; /* brown right border */
+}
+
+
+/* JOIN PAGE */     /* JOIN PAGE */         /* JOIN PAGE */     /* JOIN PAGE */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3 {
+    color: #2c3e50;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Label and Input Field Styling */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #333;
+    text-align: left; /* Ensure labels are aligned to the left */
+}
+
+label input, label textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+/* Radio Button Group */
+.radio-group {
+    display: flex;          
+    flex-direction: row; 
+    align-self: center;
+}
+
+.radio-group label {
+    display: flex;         
+    align-items: center;   
+    margin-bottom: 10px;   
+    padding-right: 30px;
+}
+
+.radio-group input[type="radio"] {
+    padding-right: 15px;
+    margin-right: 10px;
+    
+
+}
+
+.description {
+    margin-top: 25px;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(80, 47, 3);
+}
+
+/* Error Message */
+.error {
+    color: #e74c3c;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/* Membership Cards */
+.membership-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between; /* Distribute space between cards */
+    margin-top: 20px; /* Space above cards */
+}
+
+/* Base .card styles for all screen sizes */
+.card {
+   
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0; /* Start with opacity 0 */
+    transform: scale(0.8); /* Start smaller */
+    animation: fadeInScale 0.5s forwards;
+}
+
+
+/* Full width on small screens */
+@media (max-width: 424px) {
+    .card {
+        flex: 1 1 calc(100% - 20px); /* One card per row */
+    }
+}
+
+/* Two cards per row for medium screens */
+@media (min-width: 425px) and (max-width: 767px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0; /* Start invisible */
+        transform: scale(0.8); /* Start slightly smaller */
+    }
+    50% {
+        opacity: 0.5; /* Midway opacity */
+        transform: scale(1.05); /* Slightly larger for attention */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1); /* Original size */
+    }
+}
+
+.card:hover {
+    background-color: #e1e1e1; /* Change color on hover */
+}
+
+/* Membership Cards for smaller screens */
+.membership-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 50%; /* Full width */
+    height: 50%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* JOIN PAGE */     /* JOIN PAGE */     /* JOIN PAGE */     /* JOIN PAGE */

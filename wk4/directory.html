@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory-Chamber of Commerce">
+    <meta name="author" content="Marcus 'Sil' Palmer">
+    <title>Directory-Chamber of Commerce</title>
+    
+    <!-- favicon for chamber site-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/chamber.js" defer></script> 
+   
+
+
+    
+    <!-- social media meta settings-->
+    <meta property="og:title" content="Marcus 'The Gaucho Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://narradoresdigitales.github.io/wdd231/chamber/images/yerba-mate.png"> 
+    <meta property="og:url" content="https://narradoresdigitales.github.io/wdd231/chamber/directory.html">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <header>
+        <img class="chamber-image" src="images/yerba-mate.png" width="34" height="40" alt="yerba-mate-set">
+        <h1 class="chamber-name">The Gaucho Chamber of Commerce</h1>
+        <button id="myButton" title="Hamburger Menu"></button>
+    
+        <nav id="animateMe">
+            <ul class="menuLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li class="current-menu-item"><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- section to display chamber members-->
+    <button id="toggle-view" title="Toggle View">Toggle View</button>
+    <div id="members-container"></div>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>The Gaucho Chamber of Commerce</p>
+            <p>Avenida de los Gauchos 1234</p>
+            <p>La Pampa, Argentina</p>
+            <p>Email: <a href="mailto:info@gauchochamber.com">info@gauchochamber.com</a></p>
+            <p>Phone: <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+            <p>Website: <a href="https://www.gauchochamber.com" target="_blank">www.gauchochamber.com</a></p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us:</h4>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/GauchoChamber" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com/GauchoChamber" target="_blank">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/GauchoChamber" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section"> 
+            <h4>WDD231 Chamber of Commerce Project</h4>
+            <p>Marcus 'Sil' Palmer</p>
+            <p>&copy; <span id="current-year"></span> The Gaucho Chamber of Commerce. All rights reserved.</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

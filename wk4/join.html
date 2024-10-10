@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory-Chamber of Commerce">
+    <meta name="author" content="Marcus 'Sil' Palmer">
+    <title>Directory-Chamber of Commerce</title>
+    
+    <!-- favicon for chamber site-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/index.js" ></script>
+    <script src="scripts/chamber.js" ></script>
+    <script src="scripts/join.js" ></script>
+    <script src="scripts/thankyou.js" defer></script> 
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+    
+    <!-- social media meta settings-->
+    <meta property="og:title" content="Marcus 'The Gaucho Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://narradoresdigitales.github.io/wdd231/chamber/images/yerba-mate.png"> 
+    <meta property="og:url" content="https://narradoresdigitales.github.io/wdd231/chamber/directory.html">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <header>
+        <img class="chamber-image" src="images/yerba-mate.png" width="34" height="40" alt="yerba-mate-set">
+        <h1 class="chamber-name">The Gaucho Chamber of Commerce</h1>
+        <button id="myButton"></button>
+    
+        <nav id="animateMe">
+            <ul class="menuLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="current-menu-item"><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Form Content Here-->
+<main>
+    
+    <div class="form-container"> 
+    
+        <h1>Member Application</h1>
+
+        <form id="contactForm" method="GET" action="thankyou.html" class="designOne">
+            <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+            <label>Organizational Title <input type="text" name="title" required autocomplete="organization-title" title="Your Last Name"></label>
+            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+            <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+            <label>Business/Organization Name <input type="text" name="business-name" required autocomplete="organization" title="business-name"></label>
+        
+
+
+            <h3>Membership Levels</h3>
+            <div class="radio-group">
+                
+                <label>
+                    <input type="radio" name="member-level" value="Non-profit"><span>Non-profit</span>
+                </label>
+                
+                <label>
+                    <input type="radio" name="member-level" value="Bronze" checked><span>Bronze</span>
+                </label>
+
+                <label><input type="radio" name="member-level" value="Silver"><span>Silver</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="member-level" value="Gold"><span>Gold</span>
+                </label>
+            </div>
+        
+            <h3 class="description">Business/Organization Description</h3>       
+            <textarea id="business-description" name="business-description" rows="4" cols="50" placeholder="Describe your business or organization here..."></textarea>
+        
+        <!-- Hidden timestamp field -->
+            <input type="hidden" id="timestamp" name="timestamp">
+            <input type="submit" value="Apply for Membership">
+        </form>
+        <div class="error" id="error-message"></div>
+    </div>
+
+    <!-- Membership Level Cards -->
+    <div class="membership-cards">
+        <div class="card" onclick="openModal('modalNonProfit')">
+            <h4 class="nonProfit">Non-profit</h4>
+            <p>Learn more about the benefits of being a Non-profit member.</p>
+        </div>
+    
+        <div class="card" onclick="openModal('modalBronze')">
+            <h4>Bronze</h4>
+            <p>Learn more about the benefits of Bronze membership.</p>
+        </div>
+    
+        <div class="card" onclick="openModal('modalSilver')">
+            <h4>Silver</h4>
+            <p>Learn more about the benefits of Silver membership.</p>
+        </div>
+        
+        <div class="card" onclick="openModal('modalGold')">
+            <h4>Gold</h4>
+            <p>Learn more about the benefits of Gold membership.</p>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modalNonProfit" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalNonProfit')">&times;</span>
+            <h3>Benefits of Non-profit Membership</h3>
+            <p>Details about Non-profit membership benefits...</p>
+        </div>
+    </div>
+
+    <div id="modalBronze" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalBronze')">&times;</span>
+            <h3>Benefits of Bronze Membership</h3>
+            <p>Details about Bronze membership benefits...</p>
+        </div>
+    </div>
+
+    <div id="modalSilver" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalSilver')">&times;</span>
+            <h3>Benefits of Silver Membership</h3>
+            <p>Details about Silver membership benefits...</p>
+        </div>
+    </div>
+
+    <div id="modalGold" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalGold')">&times;</span>
+            <h3>Benefits of Gold Membership</h3>
+            <p>Details about Gold membership benefits...</p>
+        </div>
+    </div>
+
+
+
+    
+</main>
+
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>The Gaucho Chamber of Commerce</p>
+            <p>Avenida de los Gauchos 1234</p>
+            <p>La Pampa, Argentina</p>
+            <p>Email: <a href="mailto:info@gauchochamber.com">info@gauchochamber.com</a></p>
+            <p>Phone: <a href="tel:+541112345678">+54 11 1234-5678</a></p>
+            <p>Website: <a href="https://www.gauchochamber.com" target="_blank">www.gauchochamber.com</a></p>
+        </div>
+
+
+    
+        <div class="footer-section">
+            <h4>Follow Us:</h4>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/GauchoChamber" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com/GauchoChamber" target="_blank">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/GauchoChamber" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section"> 
+            <h4>WDD231 Chamber of Commerce Project</h4>
+            <p>Marcus 'Sil' Palmer</p>
+            <p>&copy; <span id="current-year"></span> The Gaucho Chamber of Commerce. All rights reserved.</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

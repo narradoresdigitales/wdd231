@@ -1,0 +1,24 @@
+[
+    {
+        "title": "Gaucho Festival",
+        "date": "2024-04-15",
+        "time": "10:00 AM - 6:00 PM",
+        "location": "Central Park, Mendoza",
+        "description": "Celebrate gaucho culture with traditional music, dance, food, and crafts."
+    },
+    {
+        "title": "Yerba Mate Tasting",
+        "date": "2024-05-05",
+        "time": "2:00 PM - 4:00 PM",
+        "location": "Yerba Mate Supplies, Córdoba",
+        "description": "Join us for an afternoon of tasting various yerba mate brands."
+    },
+    {
+        "title": "Traditional Argentine Cooking Class",
+        "date": "2024-06-10",
+        "time": "1:00 PM - 4:00 PM",
+        "location": "Pampa Delights, Rosario",
+        "description": "Discover the secrets of traditional Argentine cuisine."
+    }
+    
+]

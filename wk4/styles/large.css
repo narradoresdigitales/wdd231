@@ -1,0 +1,155 @@
+@media (min-width: 375px) and (max-width: 424px) {
+    #myButton {
+        font-size: 2rem;
+        border: none; 
+        background: transparent; 
+        cursor: pointer;
+        width: 30px; 
+        height: 60px;
+        position: absolute; 
+        top: 55px;
+        right: 20px;
+        z-index: 2000;
+        box-shadow: none;
+        
+    }
+}
+
+
+
+@media (min-width: 425px) and (max-width: 767px) {
+    #myButton {
+        font-size: 2rem;
+        border: none; 
+        background: transparent; 
+        cursor: pointer;
+        width: 30px; 
+        height: 60px; 
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        z-index: 2000;
+        box-shadow: none;
+        
+    }
+
+    .chamber-name {
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        color: white;
+        margin-left: 15px;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+    #myButton {
+    display: none;
+    }
+
+    ul.menuLinks, ul.menuLinks.open {
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    }
+
+    ul.menuLinks a:hover {
+    background-color:rgba(255, 255, 255, 0.2);
+    }
+
+    .chamber-name {
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        color: white;
+        margin-left: 10px;
+    }
+
+
+        #toggle-view {
+            font-size: 14px; 
+            padding: 8px; 
+        }
+
+        #animateMe {
+            display: flex; 
+            
+        }
+
+    
+    }
+
+    @media (max-width: 768px) {
+        .footer {
+            flex-direction: column; 
+            align-items: center;
+            text-align: center;
+        }
+    
+        .footer-section {
+            margin-bottom: 20px; 
+            width: 100%; 
+        }
+    
+        .social-links {
+            display: flex;
+            justify-content: center; 
+            gap: 10px; 
+        }
+    }
+    
+
+
+/* HOMEPAGE */ /* HOMEPAGE */ /* HOMEPAGE */ /* HOMEPAGE */ /* HOMEPAGE */ /* HOMEPAGE */
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width on small screens */
+    }
+
+    .current-events, .business-highlight-section, .weather-section {
+        font-size: 18px;
+    }
+
+    .weather-section, #forecast-data {
+        font-size: 18px;
+    }
+}
+
+
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    section {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width on small screens */
+    }
+
+    .current-events, .business-highlight-section, .weather-section {
+        font-size: 30px;
+    }
+
+    .weather-section, #forecast-data {
+        font-size:30px;
+        
+    }
+}
+
+/* @media query for cards on join.html*/
+
+/* Three cards per row for larger screens */
+@media (min-width: 768px) {
+    .card {
+        flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+    }
+}
+
