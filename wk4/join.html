@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
-    <script src="scripts/index.js" ></script>
-    <script src="scripts/chamber.js" ></script>
-    <script src="scripts/join.js" ></script>
+    <script src="scripts/index.js"defer ></script>
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <script src="scripts/thankyou.js" defer></script> 
 
     
@@ -47,18 +47,18 @@
 
 <!-- Form Content Here-->
 <main>
+    <div class="form-card-container">
+        <div class="form-container"> 
     
-    <div class="form-container"> 
-    
-        <h1>Member Application</h1>
+            <h1>Member Application</h1>
 
-        <form id="contactForm" method="GET" action="thankyou.html" class="designOne">
-            <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
-            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-            <label>Organizational Title <input type="text" name="title" required autocomplete="organization-title" title="Your Last Name"></label>
-            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
-            <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
-            <label>Business/Organization Name <input type="text" name="business-name" required autocomplete="organization" title="business-name"></label>
+            <form id="contactForm" method="GET" action="thankyou.html" class="designOne">
+                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                <label>Organizational Title <input type="text" name="title" required autocomplete="organization-title" title="Your Last Name"></label>
+                <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                <label>Business/Organization Name <input type="text" name="business-name" required autocomplete="organization" title="business-name"></label>
         
 
 
@@ -81,71 +81,31 @@
                 </label>
             </div>
         
-            <h3 class="description">Business/Organization Description</h3>       
-            <textarea id="business-description" name="business-description" rows="4" cols="50" placeholder="Describe your business or organization here..."></textarea>
+                <h3 class="description">Business/Organization Description</h3>       
+                <textarea id="business-description" name="business-description" rows="4" cols="50" placeholder="Describe your business or organization here..."></textarea>
         
         <!-- Hidden timestamp field -->
-            <input type="hidden" id="timestamp" name="timestamp">
-            <input type="submit" value="Apply for Membership">
-        </form>
-        <div class="error" id="error-message"></div>
-    </div>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" value="Apply for Membership">
+            </form>
+            <div class="error" id="error-message"></div>
+        </div>
 
     <!-- Membership Level Cards -->
-    <div class="membership-cards">
-        <div class="card" onclick="openModal('modalNonProfit')">
-            <h4 class="nonProfit">Non-profit</h4>
-            <p>Learn more about the benefits of being a Non-profit member.</p>
-        </div>
     
-        <div class="card" onclick="openModal('modalBronze')">
-            <h4>Bronze</h4>
-            <p>Learn more about the benefits of Bronze membership.</p>
-        </div>
-    
-        <div class="card" onclick="openModal('modalSilver')">
-            <h4>Silver</h4>
-            <p>Learn more about the benefits of Silver membership.</p>
-        </div>
-        
-        <div class="card" onclick="openModal('modalGold')">
-            <h4>Gold</h4>
-            <p>Learn more about the benefits of Gold membership.</p>
+        <div class="card">
+            <h2>Membership Benefits</h2>
+            <p>As a member of The Gaucho Chamber of Commerce, you will enjoy exclusive networking opportunities, promotional events, and more. Join us today and grow your business!</p>
+            <ul>
+                <li>Networking events</li>
+                <li>Discounts on services</li>
+                <li>Business promotion</li>
+                <li>Community support</li>
+            </ul>
         </div>
     </div>
-
     <!-- Modals -->
-    <div id="modalNonProfit" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalNonProfit')">&times;</span>
-            <h3>Benefits of Non-profit Membership</h3>
-            <p>Details about Non-profit membership benefits...</p>
-        </div>
-    </div>
-
-    <div id="modalBronze" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalBronze')">&times;</span>
-            <h3>Benefits of Bronze Membership</h3>
-            <p>Details about Bronze membership benefits...</p>
-        </div>
-    </div>
-
-    <div id="modalSilver" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalSilver')">&times;</span>
-            <h3>Benefits of Silver Membership</h3>
-            <p>Details about Silver membership benefits...</p>
-        </div>
-    </div>
-
-    <div id="modalGold" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalGold')">&times;</span>
-            <h3>Benefits of Gold Membership</h3>
-            <p>Details about Gold membership benefits...</p>
-        </div>
-    </div>
+    
 
 
 
