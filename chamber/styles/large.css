@@ -156,8 +156,8 @@
 @media (min-width: 2560px) {
     .form-card-container {
         display: flex;               /* Use flexbox for alignment */
-        justify-content: left;     /* Center horizontally */
-        align-items: left;         /* Center vertically (if needed) */
+        justify-content: center;     /* Center horizontally */
+        align-items: center;         /* Center vertically (if needed) */
         margin: auto;             /* Auto margin to center the container */
         width: 50%;                  /* Adjust width as necessary */
     }
