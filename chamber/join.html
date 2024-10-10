@@ -47,73 +47,74 @@
 
 <!-- Form Content Here-->
 <main>
+    <div class="form-card-container">
+        <div class="form-container"> 
     
-    <div class="form-container"> 
-    
-        <h1>Member Application</h1>
+            <h1>Member Application</h1>
 
-        <form id="contactForm" method="GET" action="thankyou.html" class="designOne">
-            <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
-            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-            <label>Organizational Title <input type="text" name="title" required autocomplete="organization-title" title="Your Last Name"></label>
-            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
-            <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
-            <label>Business/Organization Name <input type="text" name="business-name" required autocomplete="organization" title="business-name"></label>
+                <form id="contactForm" method="GET" action="thankyou.html" class="designOne">
+                    <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                    <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                    <label>Organizational Title <input type="text" name="title" required autocomplete="organization-title" title="Your Last Name"></label>
+                    <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+                    <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+                    <label>Business/Organization Name <input type="text" name="business-name" required autocomplete="organization" title="business-name"></label>
         
 
 
             <h3>Membership Levels</h3>
             <div class="radio-group">
                 
-                <label>
-                    <input type="radio" name="member-level" value="Non-profit"><span>Non-profit</span>
-                </label>
+                    <label>
+                        <input type="radio" name="member-level" value="Non-profit"><span>Non-profit</span>
+                    </label>
                 
-                <label>
-                    <input type="radio" name="member-level" value="Bronze" checked><span>Bronze</span>
-                </label>
+                    <label>
+                        <input type="radio" name="member-level" value="Bronze" checked><span>Bronze</span>
+                    </label>
 
-                <label><input type="radio" name="member-level" value="Silver"><span>Silver</span>
-                </label>
+                    <label>
+                        <input type="radio" name="member-level" value="Silver"><span>Silver</span>
+                    </label>
 
-                <label>
-                    <input type="radio" name="member-level" value="Gold"><span>Gold</span>
-                </label>
-            </div>
+                    <label>
+                        <input type="radio" name="member-level" value="Gold"><span>Gold</span>
+                    </label>
+                    </div>
         
-            <h3 class="description">Business/Organization Description</h3>       
-            <textarea id="business-description" name="business-description" rows="4" cols="50" placeholder="Describe your business or organization here..."></textarea>
+                    <h3 class="description">Business/Organization Description</h3>       
+                    <textarea id="business-description" name="business-description" rows="4" cols="50" placeholder="Describe your business or organization here..."></textarea>
         
         <!-- Hidden timestamp field -->
-            <input type="hidden" id="timestamp" name="timestamp">
-            <input type="submit" value="Apply for Membership">
-        </form>
+                    <input type="hidden" id="timestamp" name="timestamp">
+                    <input type="submit" value="Apply for Membership">
+                </form>
         <div class="error" id="error-message"></div>
-    </div>
+        </div>
 
     <!-- Membership Level Cards -->
-    <div class="membership-cards">
-        <div class="card" onclick="openModal('modalNonProfit')">
-            <h4 class="nonProfit">Non-profit</h4>
+        <div class="membership-cards">
+            <div class="card" onclick="openModal('modalNonProfit')">
+                <h4 class="nonProfit">Non-profit</h4>
             <p>Learn more about the benefits of being a Non-profit member.</p>
-        </div>
+            </div>
     
-        <div class="card" onclick="openModal('modalBronze')">
-            <h4>Bronze</h4>
-            <p>Learn more about the benefits of Bronze membership.</p>
-        </div>
+            <div class="card" onclick="openModal('modalBronze')">
+                <h4>Bronze</h4>
+                <p>Learn more about the benefits of Bronze membership.</p>
+            </div>
     
-        <div class="card" onclick="openModal('modalSilver')">
-            <h4>Silver</h4>
-            <p>Learn more about the benefits of Silver membership.</p>
-        </div>
+            <div class="card" onclick="openModal('modalSilver')">
+                <h4>Silver</h4>
+                <p>Learn more about the benefits of Silver membership.</p>
+            </div>
         
-        <div class="card" onclick="openModal('modalGold')">
-            <h4>Gold</h4>
-            <p>Learn more about the benefits of Gold membership.</p>
+            <div class="card" onclick="openModal('modalGold')">
+                <h4>Gold</h4>
+                <p>Learn more about the benefits of Gold membership.</p>
+            </div>
         </div>
     </div>
-
     <!-- Modals -->
     <div id="modalNonProfit" class="modal">
         <div class="modal-content">
