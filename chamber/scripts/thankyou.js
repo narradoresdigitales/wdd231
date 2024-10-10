@@ -14,8 +14,8 @@ function show(cup) {
     formData.forEach((element) => {
 
         if (element.startsWith(cup)) {
-            result=element.split('=')[1].replace("%40", "@",)
-            .replace(/\+/g, " ");
+            result= decodeURIComponent(element.split('=')[1].replace(/\+/g, ' '));
+        
         } //end if
     })
     return(result)
@@ -29,8 +29,5 @@ showInfo.innerHTML = `
 <p>Your Phone: ${show("phone")}</p>
 <p>Business Name: ${show("business")}</p>
 <p>Time Stamp: ${show("timestamp")} </p>
-<p>Email: <a href=mailto:${show("email")}">${show('email')}</p>
-
-
-
+<p>Email: <a href=mailto:${show("email")}">${show('email')}</a></p>
 `;
