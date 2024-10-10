@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
-    <script src="scripts/index.js" ></script>
-    <script src="scripts/chamber.js" ></script>
-    <script src="scripts/join.js" ></script>
+    <script src="scripts/index.js" defer ></script>
+    <script src="scripts/chamber.js" defer ></script>
+    <script src="scripts/join.js" defer ></script>
     <script src="scripts/thankyou.js" defer></script> 
 
     
@@ -94,22 +94,22 @@
 
     <!-- Membership Level Cards -->
         <div class="membership-cards">
-            <div class="card" onclick="openModal('modalNonProfit')">
+            <div id="nonProfit" class="card" onclick="openModal('modalNonProfit')">
                 <h4 class="nonProfit">Non-profit</h4>
             <p>Learn more about the benefits of being a Non-profit member.</p>
             </div>
     
-            <div class="card" onclick="openModal('modalBronze')">
+            <div id="bronze" class="card" onclick="openModal('modalBronze')">
                 <h4>Bronze</h4>
                 <p>Learn more about the benefits of Bronze membership.</p>
             </div>
     
-            <div class="card" onclick="openModal('modalSilver')">
+            <div id="silver" class="card" onclick="openModal('modalSilver')">
                 <h4>Silver</h4>
                 <p>Learn more about the benefits of Silver membership.</p>
             </div>
         
-            <div class="card" onclick="openModal('modalGold')">
+            <div id="gold" class="card" onclick="openModal('modalGold')">
                 <h4>Gold</h4>
                 <p>Learn more about the benefits of Gold membership.</p>
             </div>
@@ -120,7 +120,13 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('modalNonProfit')">&times;</span>
             <h3>Benefits of Non-profit Membership</h3>
-            <p>Details about Non-profit membership benefits...</p>
+            <ul> 
+                <li>Network with community leaders and like-minded organizations.</li>
+                <li>Enhance your organization's visibility.</li>
+                <li>Receive advocacy support that amplifies the non-profit sector's voice in key discussions.</li>
+                <li>Access training programs and workshops.</li>
+                <li>Engage in community events.</li>
+                </ul>
         </div>
     </div>
 

@@ -525,6 +525,137 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
+/* @media queries for form */
+@media (max-width: 320px) {
+    /* Adjust h3 text size */
+    h3 {
+        font-size: 16px; /* Adjust to your preferred size */
+        line-height: 1.4; /* Optional: Adjust line height */
+    }
+
+    /* Adjust form container to fit on the page */
+    .form-container {
+        padding: 10px; /* Add some padding */
+        width: 100%; /* Ensure it takes full width */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    /* Adjust input fields */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 14px; /* Adjust input font size */
+        width: 100%; /* Ensure inputs take full width */
+        padding: 8px; /* Add some padding for touch targets */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    /* Adjust submit button */
+    input[type="submit"] {
+        font-size: 16px; /* Adjust button font size */
+        padding: 10px; /* Increase padding for a better touch target */
+        width: 100%; /* Ensure button takes full width */
+    }
+
+    /* Optional: Adjust margins if needed */
+    .radio-group label {
+        font-size: 14px; /* Smaller font for radio buttons */
+    }
+}
+
+@media (max-width: 375px) {
+    /* Adjust form container */
+    .form-container {
+        padding: 10px; /* Ensure there's padding */
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Include padding in width calculation */
+        margin: 0 auto; /* Center the form container */
+    }
+
+    /* Adjust input fields for better fit */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 14px; /* Adjust font size */
+        width: 100%; /* Full width */
+        padding: 10px; /* Add padding */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    /* Adjust the submit button */
+    input[type="submit"] {
+        font-size: 16px; /* Ensure it's legible */
+        padding: 10px; /* Increase padding */
+        width: 100%; /* Full width */
+    }
+
+    /* Center the cards */
+    .cards-container {
+        display: flex; /* Use flexbox for centering */
+        flex-wrap: wrap; /* Allow cards to wrap */
+        justify-content: center; /* Center the cards */
+        margin-top: 20px; /* Space above the cards */
+    }
+
+    /* Card styles for consistency */
+    .card {
+        margin: 10px; /* Space around cards */
+        padding: 15px; /* Padding inside cards */
+        width: calc(100% - 20px); /* Ensure cards fit well */
+        max-width: 300px; /* Max width for cards */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+}
+
+@media (max-width: 414px) {
+    /* Adjust form container */
+    .form-container {
+        padding: 10px; /* Ensure there's padding */
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Include padding in width calculation */
+        margin: 0 auto; /* Center the form container */
+    }
+
+    /* Adjust input fields for better fit */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 16px; /* Adjust font size for readability */
+        width: 100%; /* Full width */
+        padding: 10px; /* Add padding */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    /* Adjust the submit button */
+    input[type="submit"] {
+        font-size: 18px; /* Ensure it's legible */
+        padding: 10px; /* Increase padding */
+        width: 100%; /* Full width */
+    }
+
+    /* Center the cards */
+    .cards-container {
+        display: flex; /* Use flexbox for centering */
+        flex-wrap: wrap; /* Allow cards to wrap */
+        justify-content: center; /* Center the cards */
+        margin-top: 20px; /* Space above the cards */
+        padding: 0 10px; /* Add horizontal padding to the container */
+    }
+
+    /* Card styles for consistency */
+    .card {
+        margin: 10px; /* Space around cards */
+        padding: 15px; /* Padding inside cards */
+        width: calc(100% - 20px); /* Ensure cards fit well */
+        max-width: 300px; /* Max width for cards */
+        box-sizing: border-box; /* Include padding in width calculation */
+        
+    }
+}
+
 
 /* Membership Cards */
 /* Style for the container that holds both form and card */
@@ -562,13 +693,28 @@ input[type="submit"]:hover {
 
     .card {
         flex-shrink: 0; /* Prevent the card from shrinking */
+        margin-top: 20px;
+        margin-right: 20px;
     }
 }
 
 
-/* Base .card styles for all screen sizes */
+/* background styles for cards */
 
+#nonProfit {
+    background-color:#007BFF;
+}
 
+#bronze {
+    background-color: #CD7F32;
+}
+#silver {
+    background-color: silver;
+}
+
+#gold {
+    background-color: #FFD700
+}
 
 /* Full width on small screens */
 @media (max-width: 424px) {
@@ -604,7 +750,7 @@ input[type="submit"]:hover {
     background-color: #e1e1e1; /* Change color on hover */
 }
 
-/* Membership Cards for smaller screens */
+
 
 
 
@@ -616,8 +762,8 @@ input[type="submit"]:hover {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 50%; /* Full width */
-    height: 50%; /* Full height */
+    width: 90%; /* Full width */
+    height: 80%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
@@ -629,6 +775,24 @@ input[type="submit"]:hover {
     padding: 20px;
     border: 1px solid #888;
     width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.modal-content h3 {
+    color: #333; /* Darker text for headings */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.modal-content ul {
+    list-style-type: disc; /* Use filled circles for bullet points */
+    padding-left: 20px; /* Space for bullet points */
+}
+
+.modal-content li {
+    margin-bottom: 8px; /* Space between each list item */
+    line-height: 1.5; /* Increase line height for better readability */
+    color: #555; /* Slightly lighter gray for the list items */
 }
 
 .close {
