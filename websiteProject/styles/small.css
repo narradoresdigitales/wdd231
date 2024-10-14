@@ -1,0 +1,20 @@
+body {
+    background-color: #D3D3D3; /* Light Gray */
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Dark gray text for contrast */
+}
+
+header, footer {
+    background-color: #008080; /* Teal */
+    color: white; /* White text for readability */
+}
+
+nav ul li a {
+    color: #FFD700; /* Gold for links */
+}
+
+nav ul li a:hover {
+    color: #FFAA00; /* Slightly darker gold for hover effect */
+}
+
+
