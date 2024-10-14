@@ -162,3 +162,18 @@
         width: 50%;                  /* Adjust width as necessary */
     }
 }
+
+
+/* Discover Page */ /* Discover Page */  /* Discover Page */ /* Discover Page */ /* Discover Page */ /* Discover Page */ /* Discover Page */ 
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 2fr 1fr; /* Adjust columns for larger screens */
+    }
+
+    .container aside {
+        /* Increase the size of the aside element */
+        padding: 20px; /* More padding for larger screens */
+        background-color: #f0f0f0; /* Optional: Change background color for better visibility */
+    }
+}

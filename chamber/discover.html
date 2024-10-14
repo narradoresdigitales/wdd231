@@ -1,47 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Directory-Chamber of Commerce">
-    <meta name="author" content="Marcus 'Sil' Palmer">
-    <title>Directory-Chamber of Commerce</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Directory-Chamber of Commerce">
+        <meta name="author" content="Marcus 'Sil' Palmer">
+        <title>Directory-Chamber of Commerce</title>
+        
+        <!-- favicon for chamber site-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <script src="scripts/index.js" defer ></script>
+        <script src="scripts/chamber.js" defer ></script>
+        <script src="scripts/join.js" defer ></script>
+        <script src="scripts/thankyou.js" defer></script> 
+        <script src="scripts/discover.js " defer></script>
     
-    <!-- favicon for chamber site-->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
-    <script src="scripts/chamber.js" defer></script> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- social media meta settings-->
-    <meta property="og:title" content="Marcus 'The Gaucho Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://narradoresdigitales.github.io/wdd231/chamber/images/yerba-mate.png"> 
-    <meta property="og:url" content="https://narradoresdigitales.github.io/wdd231/chamber/directory.html">
-    <meta name="twitter:card" content="summary_large_image">
-</head>
-<body>
-    <header>
-        <img class="chamber-image" src="images/yerba-mate.png" width="34" height="40" alt="yerba-mate-set">
-        <h1 class="chamber-name">The Gaucho Chamber of Commerce</h1>
-        <button id="myButton"></button>
     
-        <nav id="animateMe">
-            <ul class="menuLinks">
-                <li><a href="index.html">Home</a></li>
-                <li class="current-menu-item"><a href="discover.html">Discover</a></li>
-                <li ><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-            </ul>
-        </nav>
-    </header>
+        
+        <!-- social media meta settings-->
+        <meta property="og:title" content="Marcus 'The Gaucho Chamber of Commerce">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://narradoresdigitales.github.io/wdd231/chamber/images/yerba-mate.png"> 
+        <meta property="og:url" content="https://narradoresdigitales.github.io/wdd231/chamber/directory.html">
+        <meta name="twitter:card" content="summary_large_image">
+    </head>
+    <body>
+        <header>
+            <img class="chamber-image" src="images/yerba-mate.png" width="34" height="40" alt="yerba-mate-set">
+            <h1 class="chamber-name">The Gaucho Chamber of Commerce</h1>
+            <button id="myButton" title="Hamburger Menu"></button>
+        
+            <nav id="animateMe">
+                <ul class="menuLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current-menu-item"><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </header>
 
 
 <!-- New Content Here-->
+
+<div class="sidebar">
+    <p id="visit-message"></p>
+</div>
+
+<div class="container">
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <h2>La Pampa Province, Argentina</h2>
+        <section>
+            <h3>Demographics</h3>
+            <p>Population: 102,880</p>
+            <p>Area: 143,440 km2 (55,380 sq mi)</p>
+        </section>
+
+        <section>
+            <h3>Capital: Santa Rosa</h3>
+                <p>Population: 45,000</p>
+                <p>Area: 1,500 km2 (600 sq mi)</p>
+        </section>
+
+        <section>
+            <h3>Economy</h3>
+                <p>La Pampa, traditionally Argentina's leading agricultural province, generated an estimated US$3.144 billion in 2006, with a GDP per capita of US$14,000, which is above the national average.</p>
+
+                <p>Agriculture contributes to 25% of the province's economy, with cattle ranching being the most significant activity. Other important agricultural products include wheat, sunflower, and maize in the northeast.</p>
+
+                <p>In addition to agriculture, La Pampa has dairy farming, honey production, salt extraction, and numerous oil and gas wells. Despite its potential, tourism remains underdeveloped. Popular attractions include Santa Rosa, Lihué Calel National Park, and various estancias dedicated to agritourism.</p>
+        </section>
+
+        <section>
+            <h3>Gaucho Culture in La Pampa</h3>
+            <p><strong>Suggested Readings</strong></p>
+            
+                <p><a href="https://caminopampa.com/">La Pampa Province</a></p>
+                <p> <a href="https://pampasway.com/whats-the-gaucho-culture/ ">Pampa Way</a> </p>
+                <p><a href="https://www.honeytrek.com/pampas-argentina-estancias/">Gaucho Spirit of the Pampas </a></p>
+            
+        </section>
+    </aside>
+
+    <!-- Main Area Section -->
+    <main class="main-content">
+        <h1>Images of La Pampa, Argentina</h1>
+        <div class="photo-gallery">
+            <!-- Lazy Loading Images -->
+            <figure>
+                <img src="images/laPampa-province.png" data-src="images/laPampa-province.png" alt="La Pampa Province" loading="lazy">
+                <figcaption>La Pampa Province</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/escudo-LaPampa.png" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Escudo_de_la_Provincia_de_La_Pampa.svg/97px-Escudo_de_la_Provincia_de_La_Pampa.svg.png" alt="Coat of Arms" loading="lazy">
+                <figcaption>Coat of Arms, La Pampa, Argentina</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/parque-nacional-lapampa.jpg" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Parque_Nacional_Lihu%C3%A9_Calel.jpg/1920px-Parque_Nacional_Lihu%C3%A9_Calel.jpg" alt="Photo 3" loading="lazy">
+                <figcaption>The Lihué National Park</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/SantaRosa-panoramic.jpg" data-src="https://th.bing.com/th/id/OIP.i3MYEHxVAOwsYaU0GKkyVAHaFj?w=218&h=180&c=7&r=0&o=5&pid=1.7" alt="Photo 4" loading="lazy">
+                <figcaption>City of Santa Rosa</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/Gauchos_in_the_pampas_by_Rugendas.jpg" data-src="https://upload.wikimedia.org/wikipedia/commons/6/66/Gauchos_resting_in_the_pampas_by_Rugendas.jpg" alt="Photo 5" loading="lazy">
+                <figcaption>Gauchos Resting in the Pampas by Rugendas</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/gaucho-pampas.jpg" data-src="https://th.bing.com/th/id/R.addaeac17a6251613781c94d8e4d5de1?rik=e7BAshai3wHvaQ&riu=http%3a%2f%2fwww.pacarinadelsur.com%2fimages%2fstories%2fpacarina%2fnumero006%2f20302.jpg&ehk=lyxhofJf0FXQXgoBmefmFWbh2Bw7fwPB%2fWWEK728Hu4%3d&risl=&pid=ImgRaw&r=0" alt="Photo 6" loading="lazy">
+                <figcaption>Pampean Gauchos</figcaption>
+            </figure>
+        </div>
+    </main>
+</div>
 
 
 

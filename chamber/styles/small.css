@@ -857,10 +857,80 @@ input[type="submit"]:hover {
 }
 
 
+/* END JOIN PAGE */     /*  END JOIN PAGE */     /* END JOIN PAGE */     /* END JOIN PAGE */
+
+/* BEGIN DISCOVER PAGE */  /* BEGIN DISCOVER PAGE */  /* BEGIN DISCOVER PAGE */
 
 
 
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
+
+}
 
 
-/* JOIN PAGE */     /* JOIN PAGE */     /* JOIN PAGE */     /* JOIN PAGE */
+
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.sidebar h3 {
+    font-weight: bold;
+    
+}
+
+.main-content {
+    padding: 20px;
+    background-color: white
+    border-radius: 5px;
+}
+
+
+
+/* Photo gallery grid */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.photo-gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Responsive Design - Mobile View */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+
+    .sidebar {
+        order: 2; /* Move sidebar below the main content */
+    }
+
+    .main-content {
+        order: 1;
+    }
+}
+
