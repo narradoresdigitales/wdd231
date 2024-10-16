@@ -118,9 +118,6 @@ nav ul li a:hover {
         
     }
 
-    
-
-
 nav ul.show li {
     margin-bottom: 25px;
 }
@@ -135,4 +132,145 @@ nav ul.show li:last-child {
         display: flex;
         gap:20px;
     }
+}
+
+
+/* Hero Section Styles */
+
+.hero {
+    background-image: url("../images/Gauchos_in_the_pampas_by_Rugendas.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* White text over the hero background */
+    padding-top: 285px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.gallery-btn {
+    background-color: #FFD700; /* Gold */
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FFAA00; /* Darker gold on hover */
+}
+
+/* @MEDIA QUERIES FOR ---HERO SECTION  */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .hero {
+        height: 50vh; /* Smaller height for mobile */
+    }
+}
+
+
+/* About Me Section Styles */
+
+#aboutMe {
+    background-color: #f4f4f4; /* Light background for contrast */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px; /* Controls the width */
+    margin: 0 auto; /* Centers the content */
+}
+
+#aboutMe h2 {
+    font-size: 2.5rem;
+    color: #008080; /* Teal */
+    margin-bottom: 20px;
+}
+
+#aboutMe p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333; /* Dark gray for readability */
+    margin-bottom: 20px;
+}
+
+
+
+/* Contact Me Section Styles */
+
+#contactMe {
+    background-color: #ffffff; /* White background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px; /* Controls the width */
+    margin: 0 auto; /* Centers the content */
+}
+
+#contactMe h2 {
+    font-size: 2.5rem;
+    color: #008080; /* Teal */
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: 20px auto; /* Center the form on the page */
+}
+
+div {
+    margin-bottom: 20px; /* Increased space between each input group */
+}
+
+
+label {
+    display: block; /* Make the label take the full width */
+    margin-bottom: 5px; /* Add some space below the label */
+    font-weight: bold; /* Make the label bold */
+    text-align: left;
+}
+
+
+input, textarea {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding for better touch targets */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    padding: 10px 15px; /* Button padding */
+    background-color: #008080; /* Teal background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #006666; /* Darker teal on hover */
 }
