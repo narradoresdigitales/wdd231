@@ -1,10 +1,10 @@
 // scripts/navToggle.js
 
 export function toggleNavMenu(buttonId, navId) {
-    const menuButton = document.getElementById('myButton');
-    const navList = document.getElementById('nav-links');
+    const menuButton = document.getElementById(buttonId);
+    const navList = document.getElementById(navId);
 
     menuButton.addEventListener("click", () => {
-        navList.classList.toggle("show"); // Toggle the 'show' class
+        navList.classList.toggle("show"); 
     });
 }
