@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #D3D3D3; /* Light Gray */
     font-family: 'Roboto', sans-serif;
@@ -9,6 +11,38 @@ header, footer {
     color: white; /* White text for readability */
 }
 
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    padding: 10px 10px 7px 10px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 10px 20px
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    padding-right: 10px;
+
+}
+
 nav ul li a {
     color: #FFD700; /* Gold for links */
 }
@@ -16,5 +50,3 @@ nav ul li a {
 nav ul li a:hover {
     color: #FFAA00; /* Slightly darker gold for hover effect */
 }
-
-
