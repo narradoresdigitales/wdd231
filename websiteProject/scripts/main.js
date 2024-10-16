@@ -1,6 +1,7 @@
-// scripts/main.js
-import { toggleNavMenu } from './navToggle';
+
+
+import { toggleNavMenu } from './navToggle.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-    toggleNavMenu("myButton", "nav-links"); // Call the function with IDs
+    toggleNavMenu("myButton", "nav-links"); 
 });
