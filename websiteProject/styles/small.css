@@ -20,6 +20,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    border-radius: 15px;
 }
 
 header img {
@@ -77,7 +78,7 @@ header img {
 
 nav ul li a {
     color: #FFD700; /* Gold for links */    
-    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    
 }
 
 nav ul li a:hover {
@@ -91,7 +92,7 @@ nav ul li a:hover {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 80px;
         right: 0;
         width: 100%;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -104,8 +105,30 @@ nav ul li a:hover {
         color: white;
         background-color: #006666;
         text-align: center;
+        width: 75%;
+        border-radius: 15px;
+        max-height: 300px;
+        padding: 15px;
+        
+        }
+
+    nav ul.show li:hover {
+            color: #FFAA00; /* Slightly darker gold for hover effect */
+        }
+        
     }
+
+    
+
+
+nav ul.show li {
+    margin-bottom: 25px;
 }
+
+nav ul.show li:last-child {
+    margin-bottom: 0;
+}
+
 
 @media (min-width: 768px) {
     nav ul {
