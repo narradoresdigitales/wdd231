@@ -1,7 +1,6 @@
 
 
 body {
-    background-color: #D3D3D3; /* Light Gray */
     font-family: 'Roboto', sans-serif;
     color: #333; /* Dark gray text for contrast */
 }
@@ -11,7 +10,12 @@ header, footer {
     color: white; /* White text for readability */
 }
 
+section {
 
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: white;
+}
 
 /* HEADER */
 
@@ -63,21 +67,17 @@ header img {
     font-weight: bold; 
 }
 
-/* @MEDIA QUERIES FOR ---HEADER BUTTON */
-
-@media (min-width: 768px) {
-    #myButton {
-        display: none; /* Hide the button */
-    }
-}
+/* Styling the Nav elements */
 
 
 .nav-links {
     list-style-type: none;
+    
 }
 
 nav ul li a {
-    color: #FFD700; /* Gold for links */    
+    color: #FFD700; /* Gold for links */   
+    text-decoration: none; 
     
 }
 
@@ -125,15 +125,6 @@ nav ul.show li {
 nav ul.show li:last-child {
     margin-bottom: 0;
 }
-
-
-@media (min-width: 768px) {
-    nav ul {
-        display: flex;
-        gap:20px;
-    }
-}
-
 
 /* Hero Section Styles */
 
@@ -183,7 +174,7 @@ nav ul.show li:last-child {
         font-size: 1.2rem;
     }
     .hero {
-        height: 50vh; /* Smaller height for mobile */
+        height: 50vh; 
     }
 }
 

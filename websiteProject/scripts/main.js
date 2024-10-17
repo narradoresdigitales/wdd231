@@ -4,7 +4,7 @@
 
 import { toggleNavMenu } from './navToggle.js'; 
 import { handleContactForm } from './handleContactForm.js'; 
-
+import { displayLastUpdate } from './lastUpdate.js';
 
 
 
@@ -19,3 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    toggleNavMenu("myButton", "nav-links"); 
+    displayLastUpdate();  // Call to update the last modified date and current year
+});

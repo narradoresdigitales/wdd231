@@ -1,0 +1,16 @@
+/* @MEDIA QUERIES FOR ---HEADER BUTTON */
+
+@media (min-width: 768px) {
+    #myButton {
+        display: none; /* Hide the button */
+    }
+}
+
+
+/* @MEDIA QUERIES FOR ---NAV */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        gap:20px;
+    }
+}
