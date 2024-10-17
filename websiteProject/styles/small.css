@@ -112,6 +112,10 @@ nav ul li a:hover {
         
         }
 
+        nav ul.show li a {
+            color: white; /* Ensure links are visible */
+        }
+
     nav ul.show li:hover {
             color: #FFAA00; /* Slightly darker gold for hover effect */
         }
@@ -227,10 +231,12 @@ nav ul.show li:last-child {
 }
 
 form {
+    margin-top: 15px;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     max-width: 400px; /* Set a maximum width for the form */
     margin: 20px auto; /* Center the form on the page */
+    
 }
 
 div {
@@ -265,3 +271,23 @@ button {
 button:hover {
     background-color: #006666; /* Darker teal on hover */
 }
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+}
+
+footer div {
+    padding: 10px;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+
+
+
+

@@ -10,16 +10,13 @@ import { displayLastUpdate } from './lastUpdate.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     toggleNavMenu("myButton", "nav-links"); 
-});
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', handleContactForm); // Attach the event listener
-});
+   // Attach the event listener for the contact form
+const contactForm = document.getElementById('contactForm');
+   if (contactForm) { // Ensure the contact form exists before attaching the listener
+        contactForm.addEventListener('submit', handleContactForm);
+    }
 
-
-document.addEventListener("DOMContentLoaded", () => {
-    toggleNavMenu("myButton", "nav-links"); 
     displayLastUpdate();  // Call to update the last modified date and current year
 });
