@@ -23,12 +23,12 @@
     }
 
     nav ul li a {
-        color: #FFD700; /* Maintain your link color */
+        color: white; /* Maintain your link color */
         text-decoration: none; /* Ensure no underline on links */
     }
 
     nav ul li a:hover {
-        color: #FFAA00; /* Maintain your hover effect */
+        color: black; /* Maintain your hover effect */
     }
 
 }

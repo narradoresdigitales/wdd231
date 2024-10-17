@@ -11,9 +11,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Nav menu toggle
     toggleNavMenu("myButton", "nav-links"); 
 
-    await loadArtworks('./data/artworks.json'); // Adjust the path as necessary
+    
+    
+  // Fetch and display artworks from the JSON file
+// Fetch and display artworks from the JSON file
+const init = async () => {
+    try {
+        const artworksUrl = './data/artworks.json'; // Path to your JSON file
+        await loadArtworks(artworksUrl); // Call the loadArtworks function and pass the JSON file URL
+    } catch (error) {
+        console.error('Error initializing artworks:', error);
+    }
+};
+
+init(); // Call the init function to start the process
 
 
+
+    
+    
     // Attach the event listener for the contact form
     const contactForm = document.getElementById('contactForm');
     if (contactForm) { // Ensure the contact form exists before attaching the listener

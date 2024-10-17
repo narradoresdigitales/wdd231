@@ -6,7 +6,7 @@ body {
 }
 
 header, footer {
-    background-color: #008080; /* Teal */
+    background-color: #B7A99A;
     color: white; /* White text for readability */
 }
 
@@ -14,7 +14,7 @@ section {
 
     margin-top: 15px;
     border-radius: 15px;
-    background-color: white;
+    background-color: #A3B8C7;
 }
 
 /* HEADER */
@@ -28,8 +28,8 @@ header {
 }
 
 header img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 15px;    
     margin-right: 35px;
 }
@@ -60,7 +60,7 @@ header img {
 }
 
 #myButton:hover {
-    color: #FFD700; 
+    color: black; 
 }
 
 #myButton span {
@@ -82,12 +82,12 @@ header img {
 }
 
 nav ul li a {
-    color: #FFD700; /* Gold for links */   
+    color: black; /* Gold for links */   
     text-decoration: none; 
 }
 
 nav ul li a:hover {
-    color: #FFAA00; /* Slightly darker gold for hover effect */
+    color: black; /* Slightly darker gold for hover effect */
 }
 
 /* MEDIA QUERIES FOR ---HEADER */
@@ -105,7 +105,7 @@ nav ul li a:hover {
     #nav-links.show {
         display: block; /* Show menu when 'show' class is applied */
         color: white; /* Text color for visible menu */
-        background-color: #006666; /* Background color */
+        background-color: #a47f57; /* Background color */
         text-align: center; /* Center the text */
         width: 75%; /* Limit width of dropdown */
         border-radius: 15px; /* Rounded corners */
@@ -118,11 +118,11 @@ nav ul li a:hover {
     }
 
     #nav-links.show li:hover {
-        color: #FFAA00; /* Hover effect */
+        color: black; /* Hover effect */
     }
 
     #nav-links.show li a:hover {
-        color: #FFAA00; /* Hover effect */
+        color: black; /* Hover effect */
     }
 
 }
@@ -166,7 +166,7 @@ nav ul.show li:last-child {
 }
 
 .gallery-btn {
-    background-color: #FFD700; /* Gold */
+    background-color: #B7A99A;
     color: #333;
     padding: 10px 20px;
     text-decoration: none;
@@ -196,7 +196,7 @@ nav ul.show li:last-child {
 /* About Me Section Styles */
 
 #aboutMe {
-    background-color: #f4f4f4; /* Light background for contrast */
+    background-color: #A3B8C7; /* Light background for contrast */
     padding: 50px 20px;
     text-align: center;
 }
@@ -224,20 +224,20 @@ nav ul.show li:last-child {
 /* Contact Me Section Styles */
 
 #contactMe {
-    background-color: #ffffff; /* White background */
+    background-color: #A3B8C7; /* White background */
     padding: 50px 20px;
     text-align: center;
 }
 
 .contact-container {
     max-width: 600px; /* Controls the width */
-    margin: 0 auto; /* Centers the content */
+    margin-bottom: 20px;
 }
 
 #contactMe h2 {
     font-size: 2.5rem;
     color: #008080; /* Teal */
-    margin-bottom: 20px;
+    
 }
 
 form {
@@ -246,6 +246,8 @@ form {
     flex-direction: column; /* Stack elements vertically */
     max-width: 400px; /* Set a maximum width for the form */
     margin: 20px auto; /* Center the form on the page */
+    gap: 10px;
+    
     
 }
 
@@ -271,7 +273,7 @@ input, textarea {
 
 button {
     padding: 10px 15px; /* Button padding */
-    background-color: #008080; /* Teal background */
+    background-color: #A3B8C7; /* Teal background */
     color: white; /* White text */
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
@@ -283,12 +285,66 @@ button:hover {
 }
 
 
-.artwork img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
+/* MY GALLERY */
+
+/* General styles for the artworks container */
+.artworks-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center cards horizontally */
+    padding: 20px; /* Add padding around the container */
+    background-color: #A3B8C7; /* Light background color */
+    border-radius: 15px;
+    margin-top: 10px;
 }
 
+/* Styles for individual artwork cards */
+.artwork-card {
+    background-color: #fff; /* White background for the cards */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 15px; /* Space between cards */
+    padding: 20px; /* Internal padding */
+    max-width: 300px; /* Maximum width of cards */
+    transition: transform 0.3s; /* Smooth transformation on hover */
+    text-align: center; /* Center text inside the card */
+}
+
+/* Change card appearance on hover */
+.artwork-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Styles for the artwork image */
+.artwork-card img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners for the image */
+}
+
+/* Styles for the title */
+.artwork-card h3 {
+    font-size: 20px; /* Larger font size for the title */
+    margin: 10px 0; /* Space above and below the title */
+    color: #333; /* Darker color for the title */
+}
+
+/* Styles for text elements */
+.artwork-card p {
+    font-size: 14px; /* Font size for text */
+    margin: 5px 0; /* Space between text elements */
+    color: #555; /* Medium gray text color */
+}
+
+
+.artwork-card:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    background-color: #eaeaea; /* Light gray background on hover */
+    border-color: #ccc; /* Darker border */
+    
+}
 
 
 
@@ -296,7 +352,9 @@ button:hover {
 /* FOOTER */
 
 footer {
+    margin-top: 15px;
     text-align: center;
+    border-radius: 15px;
 }
 
 footer div {
