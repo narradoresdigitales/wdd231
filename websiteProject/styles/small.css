@@ -67,9 +67,11 @@ header img {
     font-weight: bold; 
 }
 
-/* Styling the Nav elements */
+
 
 /* Styling the Nav elements */
+
+
 #nav-links {
     list-style-type: none; /* Remove default bullet points */
     display: none; /* Initially hide the menu */
@@ -118,6 +120,11 @@ nav ul li a:hover {
     #nav-links.show li:hover {
         color: #FFAA00; /* Hover effect */
     }
+
+    #nav-links.show li a:hover {
+        color: #FFAA00; /* Hover effect */
+    }
+
 }
 
 nav ul.show li {
@@ -274,6 +281,16 @@ button {
 button:hover {
     background-color: #006666; /* Darker teal on hover */
 }
+
+
+.artwork img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
+
+
 
 
 /* FOOTER */
