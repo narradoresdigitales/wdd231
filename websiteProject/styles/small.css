@@ -70,80 +70,65 @@ header img {
 /* Styling the Nav elements */
 
 /* Styling the Nav elements */
-nav {
-    position: relative; /* Necessary for absolute positioning of the dropdown */
-}
-
-/* Base styles for the navigation links */
 #nav-links {
-    list-style-type: none; /* Remove default list styles */
-    display: flex; /* Set to flex for larger viewports */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+    list-style-type: none; /* Remove default bullet points */
+    display: none; /* Initially hide the menu */
 }
 
-/* Hide the nav links in mobile view initially */
-@media (max-width: 767px) {
-    #nav-links {
-        display: none; /* Ensure hidden in mobile view initially */
-    }
-}
-
-/* Show the navigation links when the 'show' class is added */
 #nav-links.show {
-    display: flex; /* Use flexbox to arrange items vertically */
-    flex-direction: column; /* Stack items in a column */
-    position: absolute; /* Allow positioning on the page */
-    top: 80px; /* Adjust the vertical position */
-    right: 0; /* Align to the right side */
-    width: 100%; /* Take full width */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-    background-color: #006666; /* Background color for visibility */
-    border-radius: 15px; /* Rounded corners */
-    max-height: 300px; /* Limit maximum height */
-    padding: 15px; /* Add padding for spacing */
+    display: block; /* Show the menu when 'show' class is added */
 }
 
-/* Style for each navigation link */
-nav ul li {
-    margin-bottom: 25px; /* Space between items */
-}
-
-/* Remove bottom margin for the last item */
-nav ul li:last-child {
-    margin-bottom: 0; 
-}
-
-/* Style for links within the navigation */
 nav ul li a {
-    color: #FFD700; /* Gold color for links */
-    text-decoration: none; /* Remove underline */
-    display: block; /* Make the link take the full width of the list item */
+    color: #FFD700; /* Gold for links */   
+    text-decoration: none; 
 }
 
-/* Hover effect for links */
 nav ul li a:hover {
     color: #FFAA00; /* Slightly darker gold for hover effect */
 }
 
-/* Media queries for mobile responsiveness */
+/* MEDIA QUERIES FOR ---HEADER */
 @media (max-width: 767px) {
-    /* No additional styles needed here if you want to keep the existing behavior */
-    #nav-links.show {
-        display: flex; /* Use flex to arrange items vertically */
-        color: white; /* Text color for visibility */
+    #nav-links {
+        display: none; /* Ensure hidden by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position menu absolutely */
+        top: 80px; /* Position below the button */
+        right: 0; /* Align to the right */
+        width: 100%; /* Full width */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
     }
 
-    /* Style links when shown */
+    #nav-links.show {
+        display: block; /* Show menu when 'show' class is applied */
+        color: white; /* Text color for visible menu */
+        background-color: #006666; /* Background color */
+        text-align: center; /* Center the text */
+        width: 75%; /* Limit width of dropdown */
+        border-radius: 15px; /* Rounded corners */
+        max-height: 300px; /* Maximum height for the menu */
+        padding: 15px; /* Padding for spacing */
+    }
+
     #nav-links.show li a {
         color: white; /* Ensure links are visible */
     }
 
-    /* Hover effect for links in mobile view */
     #nav-links.show li:hover {
-        color: #FFAA00; /* Slightly darker gold for hover effect */
+        color: #FFAA00; /* Hover effect */
     }
 }
+
+nav ul.show li {
+    margin-bottom: 25px; /* Spacing between items */
+}
+
+nav ul.show li:last-child {
+    margin-bottom: 0; /* No margin for the last item */
+}
+
+
 
 
 
