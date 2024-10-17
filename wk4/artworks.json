@@ -1,0 +1,238 @@
+[
+    {
+        "title": "Sunset over the Andes",
+        "artist": "Virginia V. Venturi",
+        "year": 2024,
+        "medium": "Pastel",
+        "dimensions": "24x36 inches",
+        "url": "https://www.example.com/images/sunset-over-andes.jpg",
+        "description": "A vibrant depiction of a sunset over the Andes mountains.",
+        "price": "$500",
+        "category": "Landscape",
+        "tags": [
+            "sunset",
+            "mountains",
+            "vibrant colors"
+        ]
+    },
+    {
+        "title": "Ocean Breeze",
+        "artist": "Virginia V. Venturi",
+        "year": 2023,
+        "medium": "Pastel",
+        "dimensions": "1920x1080 pixels",
+        "url": "https://www.example.com/images/ocean-breeze.jpg",
+        "description": "A calming scene of waves gently touching the shore.",
+        "price": "$350",
+        "category": "Seascape",
+        "tags": [
+            "ocean",
+            "breeze",
+            "calming",
+            "waves"
+        ]
+    },
+    {
+        "title": "Autumn Leaves",
+        "artist": "Virginia V. Venturi",
+        "year": 2022,
+        "medium": "Pastel",
+        "dimensions": "18x24 inches",
+        "url": "https://www.example.com/images/autumn-leaves.jpg",
+        "description": "A colorful representation of falling autumn leaves.",
+        "price": "$400",
+        "category": "Nature",
+        "tags": [
+            "autumn",
+            "leaves",
+            "nature"
+        ]
+    },
+    {
+        "title": "City Lights",
+        "artist": "Virginia V. Venturi",
+        "year": 2021,
+        "medium": "Pastel",
+        "dimensions": "30x40 inches",
+        "url": "https://www.example.com/images/city-lights.jpg",
+        "description": "An abstract painting of city lights at night.",
+        "price": "$600",
+        "category": "Abstract",
+        "tags": [
+            "city",
+            "lights",
+            "night",
+            "abstract"
+        ]
+    },
+    {
+        "title": "Forest Walk",
+        "artist": "Virginia V. Venturi",
+        "year": 2020,
+        "medium": "Pastel",
+        "dimensions": "20x30 inches",
+        "url": "https://www.example.com/images/forest-walk.jpg",
+        "description": "A tranquil scene of walking through a dense forest.",
+        "price": "$450",
+        "category": "Landscape",
+        "tags": [
+            "forest",
+            "walk",
+            "nature",
+            "trees"
+        ]
+    },
+    {
+        "title": "Rainy Day Reflections",
+        "artist": "Virginia V. Venturi",
+        "year": 2019,
+        "medium": "Pastel",
+        "dimensions": "22x28 inches",
+        "url": "https://www.example.com/images/rainy-day-reflections.jpg",
+        "description": "A melancholic view of city streets during a rainy day.",
+        "price": "$380",
+        "category": "Urban",
+        "tags": [
+            "rain",
+            "city",
+            "reflections",
+            "melancholic"
+        ]
+    },
+    {
+        "title": "Desert Mirage",
+        "artist": "Virginia V. Venturi",
+        "year": 2024,
+        "medium": "Pastel",
+        "dimensions": "24x36 inches",
+        "url": "https://www.example.com/images/desert-mirage.jpg",
+        "description": "An imaginative portrayal of a mirage in the desert.",
+        "price": "$520",
+        "category": "Fantasy",
+        "tags": [
+            "desert",
+            "mirage",
+            "imagination",
+            "fantasy"
+        ]
+    },
+    {
+        "title": "Mountain Serenity",
+        "artist": "Virginia V. Venturi",
+        "year": 2018,
+        "medium": "Pastel",
+        "dimensions": "28x40 inches",
+        "url": "https://www.example.com/images/mountain-serenity.jpg",
+        "description": "A peaceful view of snow-covered mountains under a clear sky.",
+        "price": "$650",
+        "category": "Landscape",
+        "tags": [
+            "mountains",
+            "serenity",
+            "snow",
+            "peaceful"
+        ]
+    },
+    {
+        "title": "Golden Horizon",
+        "artist": "Virginia V. Venturi",
+        "year": 2023,
+        "medium": "Pastel",
+        "dimensions": "1920x1080 pixels",
+        "url": "https://www.example.com/images/golden-horizon.jpg",
+        "description": "A sunset casting a golden glow over the horizon.",
+        "price": "$390",
+        "category": "Landscape",
+        "tags": [
+            "sunset",
+            "golden",
+            "horizon",
+            "digital"
+        ]
+    },
+    {
+        "title": "Vintage Car Show",
+        "artist": "Virginia V. Venturi",
+        "year": 2021,
+        "medium": "Pastel",
+        "dimensions": "18x24 inches",
+        "url": "https://www.example.com/images/vintage-car-show.jpg",
+        "description": "A detailed sketch of classic cars on display.",
+        "price": "$300",
+        "category": "Realism",
+        "tags": [
+            "cars",
+            "vintage",
+            "realism",
+            "sketch"
+        ]
+    },
+    {
+        "title": "Nightfall in the City",
+        "artist": "Virginia V. Venturi",
+        "year": 2020,
+        "medium": "Pastel",
+        "dimensions": "30x40 inches",
+        "url": "https://www.example.com/images/nightfall-city.jpg",
+        "description": "The city skyline illuminated against the backdrop of nightfall.",
+        "price": "$580",
+        "category": "Urban",
+        "tags": [
+            "city",
+            "nightfall",
+            "skyline",
+            "urban"
+        ]
+    },
+    {
+        "title": "Dreaming in Blue",
+        "artist": "Virginia V. Venturi",
+        "year": 2022,
+        "medium": "Pastel",
+        "dimensions": "24x36 inches",
+        "url": "https://www.example.com/images/dreaming-blue.jpg",
+        "description": "An abstract piece using various shades of blue.",
+        "price": "$470",
+        "category": "Abstract",
+        "tags": [
+            "blue",
+            "dream",
+            "abstract",
+            "mixed media"
+        ]
+    },
+    {
+        "title": "Fields of Lavender",
+        "artist": "Virginia V. Venturi",
+        "year": 2023,
+        "medium": "Pastel",
+        "dimensions": "24x36 inches",
+        "url": "https://www.example.com/images/fields-lavender.jpg",
+        "description": "A calming view of lavender fields stretching to the horizon.",
+        "price": "$550",
+        "category": "Nature",
+        "tags": [
+            "lavender",
+            "fields",
+            "nature",
+            "calm"
+        ]
+    },
+    {
+        "title": "Frosted Morning",
+        "artist": "Virginia V. Venturi",
+        "year": 2021,
+        "medium": "Pastel",
+        "dimensions": "20x30 inches",
+        "url": "https://www.example.com/images/frosted-morning.jpg",
+        "description": "A crisp winter morning with frost covering the landscape.",
+        "price": "$430",
+        "category": "Landscape",
+        "tags": [
+            "frost",
+            "morning",
+            "winter",
+            "landscape"
+        ]
+    }
+]
