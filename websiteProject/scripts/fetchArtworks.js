@@ -26,7 +26,7 @@ const displayArtworks = (artworks) => {
 
         // Add content to the card
         card.innerHTML = `
-            <img src="${artwork.url}" alt="${artwork.title}" />
+            <img src="${artwork.url}" alt="${artwork.title}" loading="lazy" />
             <h3>${artwork.title}</h3>
             <p><strong>Artist:</strong> ${artwork.artist}</p>
             <p><strong>Year:</strong> ${artwork.year}</p>
