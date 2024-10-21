@@ -90,6 +90,15 @@ nav ul li a:hover {
     color: black; /* Slightly darker gold for hover effect */
 }
 
+.active {
+    color: black; /* Teal or the main theme color */
+    font-weight: bold;
+    background-color: #A3B8C7;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+
 /* MEDIA QUERIES FOR ---HEADER */
 @media (max-width: 767px) {
     #nav-links {
