@@ -228,6 +228,23 @@ nav ul.show li:last-child {
     margin-bottom: 20px;
 }
 
+.about-me-button {
+    display: inline-block;
+    background-color: #008080; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    margin-top: 20px; /* Spacing above the button */
+}
+
+.about-me-button:hover {
+    background-color: #008080; /* Darker green on hover */
+}
+
 
 
 /* Contact Me Section Styles */
