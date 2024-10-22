@@ -180,12 +180,20 @@ nav ul.show li:last-child {
     padding: 10px 20px;
     text-decoration: none;
     font-size: 1rem;
+    cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #FFAA00; /* Darker gold on hover */
+.gallery-btn:hover {
+    transform: translateX(5px); /* Slide the button to the right */
+
+}
+
+.gallery-btn:hover {
+    background-color: #9E8C7B;
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 /* @MEDIA QUERIES FOR ---HERO SECTION  */
@@ -213,6 +221,9 @@ nav ul.show li:last-child {
 .about-container {
     max-width: 800px; /* Controls the width */
     margin: 0 auto; /* Centers the content */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 #aboutMe h2 {
@@ -230,7 +241,7 @@ nav ul.show li:last-child {
 
 .about-me-button {
     display: inline-block;
-    background-color: #008080; /* Green background */
+    background-color: #9E8C7B; /* Green background */
     color: white; /* White text */
     padding: 10px 20px; /* Padding around the text */
     text-align: center; /* Center the text */
@@ -239,11 +250,95 @@ nav ul.show li:last-child {
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition for hover */
     margin-top: 20px; /* Spacing above the button */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    
 }
 
 .about-me-button:hover {
-    background-color: #008080; /* Darker green on hover */
+    background-color: black; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
 }
+
+
+.met-link {
+    color: #008080; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.met-link:hover {
+    color: #7D5B5A; /* Darker shade for hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Optional: Additional styles */
+.met-link:visited {
+    color: #4A3D3D; /* Color for visited links */
+}
+
+
+
+/* Met Museum API display */
+/* Container for Met artworks */
+.met-artworks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Create responsive grid */
+    gap: 20px; /* Space between the cards */
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Style for each artwork card */
+.met-artwork-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add hover effect for each artwork card */
+.met-artwork-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Style for the image inside the card */
+.met-artwork-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd; /* Separate image from text */
+    border-radius: 8px 8px 0 0;
+}
+
+/* Text section of the card */
+.met-artwork-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+    text-align: center;
+}
+
+.met-artwork-card p {
+    margin: 10px;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Optional: Additional layout tweaks for smaller screens */
+@media (max-width: 600px) {
+    .met-artworks-container {
+        grid-template-columns: 1fr; /* Stack the cards on small screens */
+    }
+}
+
+
+
+
+
 
 
 
