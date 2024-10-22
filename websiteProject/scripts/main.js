@@ -29,7 +29,7 @@ init(); // Call the init function to start the process
 
 // Load Met Museum artworks when the page loads
 
-    loadMetArtworks('landscape', 10); // Example query: fetch 10 landscape artworks
+    loadMetArtworks('van Gogh',  20); // Example query: fetch 10 landscape artworks
 
 
 
