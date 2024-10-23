@@ -146,9 +146,6 @@ nav ul.show li:last-child {
 
 
 
-
-
-
 /* Hero Section Styles */
 
 .hero {
@@ -338,10 +335,6 @@ nav ul.show li:last-child {
 
 
 
-
-
-
-
 /* Contact Me Section Styles */
 
 #contactMe {
@@ -404,6 +397,67 @@ button {
 button:hover {
     background-color: #006666; /* Darker teal on hover */
 }
+
+
+
+
+
+/* THANK YOU.HTML */
+
+
+/* Styling for the container of the thank-you message */
+.thank-you-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px; /* Limit the width of the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Styling for the h2 inside the message */
+.thank-you-message h2 {
+    color: #2c3e50; /* Darker shade of gray for the heading */
+    font-size: 24px; /* Larger font size for the heading */
+    margin-bottom: 15px;
+}
+
+/* Styling for the paragraph text */
+.thank-you-message p {
+    font-size: 16px; /* Set the font size for the paragraph */
+    color: #34495e; /* A medium gray color */
+    margin-bottom: 10px;
+}
+
+/* Styling for strong tags inside the message */
+.thank-you-message strong {
+    color: #9922ae; /* Green color for emphasis */
+}
+
+/* Styling for the button link */
+.thank-you-message .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db; /* Blue background for the button */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Hover effect for the button */
+.thank-you-message .btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+
+
+
+
+
+
 
 
 /* MY GALLERY */
