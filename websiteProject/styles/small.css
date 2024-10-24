@@ -409,40 +409,38 @@ input, textarea {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-/* Styling for the h2 inside the message */
-.thank-you-message h2 {
-    color: #2c3e50; /* Darker shade of gray for the heading */
-    font-size: 24px; /* Larger font size for the heading */
-    margin-bottom: 15px;
+.thank-you-message ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-/* Styling for the paragraph text */
-.thank-you-message p {
-    font-size: 16px; /* Set the font size for the paragraph */
-    color: #34495e; /* A medium gray color */
-    margin-bottom: 10px;
+.thank-you-message li {
+    margin: 10px 0;
+    font-size: 18px; /* Increased font size */
 }
 
-/* Styling for strong tags inside the message */
-.thank-you-message strong {
-    color: #9922ae; /* Green color for emphasis */
+.thank-you-message h2, .thank-you-message h3 {
+    color: #333; /* Darker color for headings */
+    font-weight: bold;
 }
 
-/* Styling for the button link */
-.thank-you-message .btn {
+.thank-you-message-btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #3498db; /* Blue background for the button */
+    background-color: #007BFF; /* A vibrant color for the button */
     color: white;
+    border-radius: 5px;
     text-decoration: none;
-    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-/* Hover effect for the button */
-.thank-you-message .btn:hover {
-    background-color: #2980b9; /* Darker blue on hover */
+.thank-you-message-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
+
+
+
+
 
 
 
