@@ -4,6 +4,8 @@ import { toggleNavMenu } from './navToggle.js';
 import { displayLastUpdate } from './lastUpdate.js';
 import { loadArtworks } from './fetchArtworks.js';
 import { loadMetArtworks } from './fetchMetArt.js';
+import { handleContactFormSubmission } from './contactFormHandler.js';
+import { displayUserData } from './thankYou.js';
 
 
 // Attach the event listener for the nav button
@@ -35,11 +37,25 @@ init();
 
 
 
-
-
-
 // Load Met Museum artworks when the page loads
 loadMetArtworks('van Gogh',  20); 
+
+
+// Check if we are on the contactMe.html page
+if (document.getElementById('contactForm')) {
+    // Handle form submission
+    handleContactFormSubmission('contactForm');
+}
+
+ // Check if we are on the thankYou.html page
+ if (document.querySelector('main') && window.location.pathname.includes('thankYou.html')) {
+    displayUserData(); // Display user data on thank you page
+}
+
+
+handleContactFormSubmission('contactForm');
+
+
 
 
 
