@@ -6,8 +6,8 @@ body {
 }
 
 header, footer {
-    background-color: #B7A99A;
-    color: white; /* White text for readability */
+    background-color: #e8dfd5;
+    color: black; /* White text for readability */
 }
 
 section {
@@ -55,7 +55,7 @@ header img {
     border: none; 
     cursor: pointer; 
     font-size: 24px; 
-    color: white; 
+    color: black; 
     padding: 10px; 
 }
 
@@ -113,7 +113,7 @@ nav ul li a:hover {
 
     #nav-links.show {
         display: block; /* Show menu when 'show' class is applied */
-        color: white; /* Text color for visible menu */
+        color: black; /* Text color for visible menu */
         background-color: #a47f57; /* Background color */
         text-align: center; /* Center the text */
         width: 75%; /* Limit width of dropdown */
@@ -172,7 +172,7 @@ nav ul.show li:last-child {
 }
 
 .gallery-btn {
-    background-color: #B7A99A;
+    background-color: #e8dfd5;
     color: #333;
     padding: 10px 20px;
     text-decoration: none;
@@ -225,21 +225,21 @@ nav ul.show li:last-child {
 
 #aboutMe h2 {
     font-size: 2.5rem;
-    color: #008080; /* Teal */
+    color: black; /* Teal */
     margin-bottom: 20px;
 }
 
 #aboutMe p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #333; /* Dark gray for readability */
+    color: black; /* Dark gray for readability */
     margin-bottom: 20px;
 }
 
 .about-me-button {
     display: inline-block;
-    background-color: #9E8C7B; /* Green background */
-    color: white; /* White text */
+    background-color: #e8dfd5; /* Green background */
+    color: black; /* White text */
     padding: 10px 20px; /* Padding around the text */
     text-align: center; /* Center the text */
     text-decoration: none; /* Remove underline */
@@ -427,7 +427,7 @@ input, textarea {
 .thank-you-message-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF; /* A vibrant color for the button */
+    background-color: #333333; /* A vibrant color for the button */
     color: white;
     border-radius: 5px;
     text-decoration: none;
