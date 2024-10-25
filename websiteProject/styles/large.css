@@ -19,16 +19,18 @@
     }
 
     nav ul li {
-        display: inline; /* Ensure list items are inline for larger viewports */
+        display: inline; 
     }
 
     nav ul li a {
-        color: white; /* Maintain your link color */
+        color: black; /* Maintain your link color */
         text-decoration: none; /* Ensure no underline on links */
     }
 
     nav ul li a:hover {
-        color: black; /* Maintain your hover effect */
+        transform: scale(1.05); /* Slightly scale up */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        color: #a47f57;
     }
 
 }
