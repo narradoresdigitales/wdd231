@@ -8,13 +8,13 @@ import { handleContactFormSubmission } from './contactFormHandler.js';
 import { displayUserData } from './thankYou.js';
 
 
-// Attach the event listener for the nav button
+
 document.addEventListener("DOMContentLoaded", async () => {
     // Nav menu toggle
     toggleNavMenu("myButton", "nav-links"); 
 
 
-    // Add this at the end of the DOMContentLoaded function
+
 document.querySelectorAll('#nav-links a').forEach(link => {
     link.addEventListener('click', (event) => {
         console.log(`Navigating to: ${link.href}`);
@@ -41,6 +41,8 @@ init();
 loadMetArtworks('van Gogh',  20); 
 
 
+
+
 // Check if we are on the contactMe.html page
 if (document.getElementById('contactForm')) {
     // Handle form submission
@@ -48,22 +50,14 @@ if (document.getElementById('contactForm')) {
 }
 
  // Check if we are on the thankYou.html page
- if (document.querySelector('main') && window.location.pathname.includes('thankYou.html')) {
+if (document.querySelector('main') && window.location.pathname.includes('thankYou.html')) {
     displayUserData(); // Display user data on thank you page
 }
 
-
+// User Data 
 handleContactFormSubmission('contactForm');
 
 
-
-
-
-
-
-
-
-
-    // Call to update the last modified date and current year
+// Call to update the last modified date and current year
     displayLastUpdate();
 });

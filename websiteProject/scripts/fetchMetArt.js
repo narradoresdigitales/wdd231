@@ -1,7 +1,24 @@
 // fetchMetArt.js
 
-// Function to load artworks from the Met Museum API
-export const loadMetArtworks = async (query = 'landscape', limit = 10) => {
+
+// STEP 1 Function to fetch and display artwork details by objectID from the Met Museum API //
+
+const fetchMetArtworkById = async (objectID) => {
+    const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`;
+    
+    try {
+        const response = await fetch(url);
+        const artwork = await response.json();
+        
+        displayMetArtwork(artwork); // I previously targeted this element
+    } catch (error) {
+        console.error(`Error fetching artwork with objectID ${objectID}:`, error);
+    }
+};
+
+
+// STEP 2 Function to load artworks from the Met Museum API
+export const loadMetArtworks = async (query = 'landscape', limit = 20) => {
     const searchUrl = `https://collectionapi.metmuseum.org/public/collection/v1/search?q=${query}&hasImages=true`;
     
     try {
@@ -13,7 +30,9 @@ export const loadMetArtworks = async (query = 'landscape', limit = 10) => {
         const data = await response.json();
         
         if (data.objectIDs) {
-            // Fetch and display artworks using objectIDs
+
+// STEP 3 Fetch and display artworks using objectIDs
+
             const objectIDs = data.objectIDs.slice(0, limit);
             for (const objectID of objectIDs) {
                 await fetchMetArtworkById(objectID);
@@ -26,29 +45,19 @@ export const loadMetArtworks = async (query = 'landscape', limit = 10) => {
     }
 };
 
-// Function to fetch and display artwork details by objectID from the Met Museum API
-const fetchMetArtworkById = async (objectID) => {
-    const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`;
-    
-    try {
-        const response = await fetch(url);
-        const artwork = await response.json();
-        
-        displayMetArtwork(artwork); // Call the function to display artwork details
-    } catch (error) {
-        console.error(`Error fetching artwork with objectID ${objectID}:`, error);
-    }
-};
-
-// Function to display Met artworks in the specified container
+// STEP 4 Function to display Met artworks in the specified container
 const displayMetArtwork = (artwork) => {
     const artworksContainer = document.getElementById('metArtworksContainer'); // Select the Met artworks container
 
-    // Create a card for each artwork
+
+
+// STEP 5 Create a card for each artwork
     const card = document.createElement('div');
     card.classList.add('artwork-card'); // Add a class for styling
 
-    // Add content to the card
+
+
+// STEP 6 Add content to the card
     card.innerHTML = `
         <img src="${artwork.primaryImage}" alt="${artwork.title}" loading="lazy" />
         <h3>${artwork.title}</h3>
@@ -59,6 +68,6 @@ const displayMetArtwork = (artwork) => {
         <p><strong>Credit Line:</strong> ${artwork.creditLine || 'Unknown'}</p>
     `;
 
-    // Append the card to the Met artworks container
+    // STEP 7 Append the card to the Met artworks container
     artworksContainer.appendChild(card);
 };
